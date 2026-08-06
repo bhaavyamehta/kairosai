@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KairosAI - Investor Pitch Deck (1920x1080p)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Floating Toolbar -->
+    <nav class="top-nav">
+        <div class="brand">
+            <i data-lucide="shield-check" class="brand-icon"></i>
+            <span class="brand-name">Kairos<span class="brand-highlight">AI</span></span>
+            <span class="deck-badge">Investor Deck • 1920x1080p</span>
+        </div>
+        <div class="nav-center">
+            <span class="slide-indicator">Slide <span id="current-slide-num">1</span> of 10</span>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <button class="nav-btn" id="btn-notes" title="Toggle Speaker Notes (Key N)"><i data-lucide="file-text"></i> Speaker Notes</button>
+            <button class="nav-btn" id="btn-overview" title="Slide Overview (Key M)"><i data-lucide="grid"></i> Slides</button>
+            <button class="nav-btn" id="btn-print" title="Export PDF / Print (Key P)"><i data-lucide="printer"></i> PDF / Print</button>
+            <button class="nav-btn" id="btn-fullscreen" title="Toggle Fullscreen (Key F)"><i data-lucide="maximize"></i> Fullscreen</button>
+        </div>
+    </nav>
+
+    <!-- Presentation Container (Maintains 1920x1080 aspect ratio) -->
+    <div class="viewport-wrapper">
+        <div class="presentation-container" id="presentation">
+
+            <!-- SLIDE 1: Title & Cover -->
+            <section class="slide active" id="slide-1" data-slide-index="1">
+                <div class="slide-header-badge">
+                    <span class="pill-badge primary"><i data-lucide="zap"></i> Next-Gen Cybersecurity</span>
+                    <span class="pill-badge muted">Seed Pitch Deck</span>
+                </div>
+                <div class="slide-hero-grid">
+                    <div class="hero-left">
+                        <div class="logo-box">
+                            <i data-lucide="shield-alert" class="hero-logo-icon"></i>
+                        </div>
+                        <h1 class="hero-title">Kairos<span class="text-accent">AI</span></h1>
+                        <p class="hero-subtitle">Democratizing Real-Time Threat Detection & Plain-English Explainable AI for SMBs</p>
+                        <p class="hero-description">
+                            Traditional Intrusion Detection Systems overwhelm non-experts with raw alert dumps. KairosAI combines lightweight ML packet analysis with LLM explanations to turn complex network logs into clear, actionable security intelligence.
+                        </p>
+                        
+                        <div class="hero-highlights">
+                            <div class="highlight-item">
+                                <i data-lucide="check-circle-2" class="icon-success"></i>
+                                <span>Real-Time NIDS (Scapy/PyShark)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i data-lucide="check-circle-2" class="icon-success"></i>
+                                <span>ML Anomaly Detection (RF + IF)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i data-lucide="check-circle-2" class="icon-success"></i>
+                                <span>Plain-English XAI (Llama 3)</span>
+                            </div>
+                        </div>
+
+                        <div class="team-footer-line">
+                            <strong>Team:</strong> XYZ (Backend Lead) • ABC (UI/UX) • DEF (AI/ML) • GHI (QA & Security)
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="stat-cards-column">
+                            <div class="stat-card">
+                                <div class="stat-icon-wrapper danger">
+                                    <i data-lucide="trending-up"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-number">43%</h3>
+                                    <p class="stat-label">Of Cyberattacks Target SMBs</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrapper warning">
+                                    <i data-lucide="alert-triangle"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-number">$10.5T</h3>
+                                    <p class="stat-label">Global Cybercrime Costs by 2025</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrapper primary">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-number">48 Min</h3>
+                                    <p class="stat-label">Average Intruder Breakout Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Problem Statement -->
+            <section class="slide" id="slide-2" data-slide-index="2">
+                <div class="slide-header">
+                    <span class="slide-num-tag">02</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">The Urgent SMB Security Crisis</h2>
+                        <p class="slide-subtitle">Surging Cyberattacks, Unaffordable Enterprise Tools & Overwhelming Alert Fatigue</p>
+                    </div>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="card-box">
+                        <h3 class="card-heading text-danger"><i data-lucide="shield-x"></i> Core Pain Points for SMBs & Education</h3>
+                        <div class="problem-list">
+                            <div class="problem-item">
+                                <div class="problem-bullet">1</div>
+                                <div>
+                                    <h4 class="problem-title">Alert Floods Without Human Context</h4>
+                                    <p class="problem-text">Legacy IDS (Snort, Zeek) spit out thousands of raw, cryptic TCP/IP hex logs daily that require a $150k/year security analyst to diagnose.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet">2</div>
+                                <div>
+                                    <h4 class="problem-title">79% Intrusions Are Now Malware-Free</h4>
+                                    <p class="problem-text">Modern attackers use stolen credentials and living-off-the-land techniques that bypass traditional static signature-based firewalls.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet">3</div>
+                                <div>
+                                    <h4 class="problem-title">AI-Augmented Phishing Speed</h4>
+                                    <p class="problem-text">Generative AI phishing messages achieve a 54% click rate vs 12% for human phishing, accelerating initial intrusion vectors dramatically.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet">4</div>
+                                <div>
+                                    <h4 class="problem-title">Prohibitive Cost of Enterprise SIEMs</h4>
+                                    <p class="problem-text">CrowdStrike, Darktrace, and Splunk require six-figure budgets and complex deployment teams impossible for SMBs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-box flex-center">
+                        <h3 class="card-heading"><i data-lucide="bar-chart-2"></i> SMB Cyber Attack Landscape Trends</h3>
+                        <div class="chart-container-box">
+                            <canvas id="chart-problem"></canvas>
+                        </div>
+                        <div class="chart-caption">
+                            <i data-lucide="info"></i> 80% of ransomware assaults now explicitly target organizations under 1,000 employees.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: The Solution -->
+            <section class="slide" id="slide-3" data-slide-index="3">
+                <div class="slide-header">
+                    <span class="slide-num-tag">03</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">The Solution: KairosAI</h2>
+                        <p class="slide-subtitle">Democratizing Intrusion Detection Through Machine Learning & Explainable AI</p>
+                    </div>
+                </div>
+
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon-box primary">
+                            <i data-lucide="radio"></i>
+                        </div>
+                        <h3 class="solution-card-title">Real-Time Packet Sniffing</h3>
+                        <p class="solution-card-desc">
+                            Continuous capture of network traffic via Scapy/PyShark. Extracts 5-tuple metadata, packet sizes, flow rates, and payload entropy without violating user privacy.
+                        </p>
+                        <span class="tech-tag">Scapy • PyShark • Async FastAPI</span>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon-box accent">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3 class="solution-card-title">Dual ML Detection Engine</h3>
+                        <p class="solution-card-desc">
+                            Supervised <strong>Random Forest</strong> flags known attack vectors with 99%+ accuracy, while unsupervised <strong>Isolation Forest</strong> catches novel zero-day network anomalies.
+                        </p>
+                        <span class="tech-tag">Scikit-Learn • RF • Isolation Forest</span>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon-box success">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="solution-card-title">Explainable AI (XAI) Layer</h3>
+                        <p class="solution-card-desc">
+                            Queries local LLM (Llama 3 via Ollama/OpenAI) to translate anomalous feature vectors into clear, plain-English incident summaries and recommended response steps.
+                        </p>
+                        <span class="tech-tag">Llama 3 • Ollama • XAI Prompts</span>
+                    </div>
+
+                    <div class="solution-card">
+                        <div class="solution-icon-box warning">
+                            <i data-lucide="layout-dashboard"></i>
+                        </div>
+                        <h3 class="solution-card-title">Intuitive React Dashboard</h3>
+                        <p class="solution-card-desc">
+                            Real-time streaming UI featuring network flow diagrams (React Flow), traffic trend charts (Chart.js), and automated single-click incident PDF reports.
+                        </p>
+                        <span class="tech-tag">React • Tailwind • Chart.js</span>
+                    </div>
+                </div>
+
+                <div class="solution-banner">
+                    <div class="banner-content">
+                        <i data-lucide="shield-check" class="banner-icon"></i>
+                        <div>
+                            <strong>Core Value Proposition:</strong> KairosAI turns complex cybersecurity data into plain language, allowing any IT generalist to manage network defense effectively at 1/10th the cost.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: Market Opportunity -->
+            <section class="slide" id="slide-4" data-slide-index="4">
+                <div class="slide-header">
+                    <span class="slide-num-tag">04</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Market Opportunity & Target Verticals</h2>
+                        <p class="slide-subtitle">A $50B+ Addressable Market Hungry for Accessible Network Security</p>
+                    </div>
+                </div>
+
+                <div class="grid-3-tam">
+                    <div class="tam-box">
+                        <span class="tam-badge">TAM</span>
+                        <h3 class="tam-value">$50.2 Billion</h3>
+                        <h4 class="tam-label">Global SMB Cybersecurity Market</h4>
+                        <p class="tam-desc">Total worldwide spending by small and mid-sized enterprises on cybersecurity software and services by 2026.</p>
+                    </div>
+
+                    <div class="tam-box highlight-tam">
+                        <span class="tam-badge primary">SAM</span>
+                        <h3 class="tam-value text-accent">$12.4 Billion</h3>
+                        <h4 class="tam-label">SMB Network Intrusion & SOC Market</h4>
+                        <p class="tam-desc">Addressable segment focused on network detection, threat intelligence, and log monitoring for companies with <1,000 employees.</p>
+                    </div>
+
+                    <div class="tam-box">
+                        <span class="tam-badge">SOM</span>
+                        <h3 class="tam-value">$450 Million</h3>
+                        <h4 class="tam-label">Initial Serviceable Market</h4>
+                        <p class="tam-desc">Higher-Ed Computer Labs, Regional Managed Service Providers (MSPs), and high-risk Fintech/Healthcare SMBs.</p>
+                    </div>
+                </div>
+
+                <div class="grid-3-col mt-4">
+                    <div class="card-box-sm">
+                        <div class="vertical-icon"><i data-lucide="building-2"></i></div>
+                        <h4>Small & Medium Enterprises</h4>
+                        <p>Companies with 10–500 employees lacking a dedicated SOC team, requiring zero-overhead plug-and-play protection.</p>
+                    </div>
+                    <div class="card-box-sm">
+                        <div class="vertical-icon"><i data-lucide="graduation-cap"></i></div>
+                        <h4>Educational Institutions</h4>
+                        <p>Universities, high schools, and computer science labs needing affordable NIDS with teaching-friendly XAI explanations.</p>
+                    </div>
+                    <div class="card-box-sm">
+                        <div class="vertical-icon"><i data-lucide="server"></i></div>
+                        <h4>Managed Service Providers (MSPs)</h4>
+                        <p>MSPs looking for a multi-tenant, white-labeled threat detection engine to bundle for hundreds of client sites.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Technical Architecture -->
+            <section class="slide" id="slide-5" data-slide-index="5">
+                <div class="slide-header">
+                    <span class="slide-num-tag">05</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">System Architecture & Data Pipeline</h2>
+                        <p class="slide-subtitle">Modular 6-Stage Pipeline Built for Speed, Accuracy & Explainability</p>
+                    </div>
+                </div>
+
+                <div class="architecture-flow">
+                    <div class="arch-step">
+                        <div class="arch-step-num">1</div>
+                        <div class="arch-step-icon"><i data-lucide="activity"></i></div>
+                        <h4 class="arch-step-title">Packet Sniffing</h4>
+                        <p class="arch-step-text">Live network capture via Scapy & PyShark. Filters metadata.</p>
+                        <span class="arch-code">Scapy Engine</span>
+                    </div>
+
+                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">2</div>
+                        <div class="arch-step-icon"><i data-lucide="database"></i></div>
+                        <h4 class="arch-step-title">Feature Extraction</h4>
+                        <p class="arch-step-text">Extracts 5-tuples, byte counts, flow rate, entropy to SQLite.</p>
+                        <span class="arch-code">FastAPI + SQLite</span>
+                    </div>
+
+                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">3</div>
+                        <div class="arch-step-icon"><i data-lucide="binary"></i></div>
+                        <h4 class="arch-step-title">ML Detection</h4>
+                        <p class="arch-step-text">Random Forest & Isolation Forest score flows for anomalies.</p>
+                        <span class="arch-code">Scikit-Learn</span>
+                    </div>
+
+                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="arch-step highlight-step">
+                        <div class="arch-step-num">4</div>
+                        <div class="arch-step-icon"><i data-lucide="brain-circuit"></i></div>
+                        <h4 class="arch-step-title">XAI Explanation</h4>
+                        <p class="arch-step-text">Llama 3 generates plain-English reasoning & response advice.</p>
+                        <span class="arch-code">Llama 3 / Ollama</span>
+                    </div>
+
+                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">5</div>
+                        <div class="arch-step-icon"><i data-lucide="monitor"></i></div>
+                        <h4 class="arch-step-title">Dashboard & Reports</h4>
+                        <p class="arch-step-text">React UI displays live flows, charts, and auto PDF reports.</p>
+                        <span class="arch-code">React + Chart.js</span>
+                    </div>
+                </div>
+
+                <div class="tech-stack-row">
+                    <div class="tech-item"><i data-lucide="code"></i> <strong>Backend:</strong> Python 3.11, FastAPI, Scapy, PyShark, SQLite</div>
+                    <div class="tech-item"><i data-lucide="cpu"></i> <strong>ML & AI:</strong> Random Forest, Isolation Forest, Llama 3, Ollama API</div>
+                    <div class="tech-item"><i data-lucide="layout"></i> <strong>Frontend:</strong> React, Tailwind CSS, Chart.js, React Flow</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: Product Capabilities -->
+            <section class="slide" id="slide-6" data-slide-index="6">
+                <div class="slide-header">
+                    <span class="slide-num-tag">06</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Product Capabilities & Performance Metrics</h2>
+                        <p class="slide-subtitle">Enterprise-Grade Performance Engineered for Resource-Constrained Environments</p>
+                    </div>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="dashboard-mockup-card">
+                        <div class="mockup-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="mockup-title">KairosAI Live Threat Monitor (Mock UI)</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="alert-box-demo danger">
+                                <div class="alert-box-top">
+                                    <span class="alert-tag danger"><i data-lucide="alert-octagon"></i> HIGH SEVERITY ALERT</span>
+                                    <span class="alert-time">10:42:15 AM</span>
+                                </div>
+                                <h4 class="alert-headline">Port Scan & Lateral Reconnaissance Detected</h4>
+                                <p class="alert-sub text-mono">Source IP: 192.168.1.105 ➔ Destination: 192.168.1.1 (Gateway)</p>
+                                <div class="xai-box">
+                                    <i data-lucide="sparkles" class="xai-icon"></i>
+                                    <div class="xai-text">
+                                        <strong>AI Explanation:</strong> "Host 192.168.1.105 attempted 84 SYN connections to consecutive ports within 2.4 seconds. Random Forest flagged high entropy score (0.94). This indicates automated port scanning. <em>Recommended Action: Isolate host 192.168.1.105 immediately.</em>"
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert-box-demo warning mt-2">
+                                <div class="alert-box-top">
+                                    <span class="alert-tag warning"><i data-lucide="shield-alert"></i> MEDIUM SEVERITY</span>
+                                    <span class="alert-time">10:38:02 AM</span>
+                                </div>
+                                <h4 class="alert-headline">Unusual Data Transfer Volume</h4>
+                                <p class="alert-sub text-mono">Source IP: 10.0.4.12 (Finance PC) ➔ 185.220.101.5 (External IP)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metrics-column">
+                        <div class="metric-box">
+                            <div class="metric-header">
+                                <h3 class="metric-val text-success">99.2%</h3>
+                                <i data-lucide="check-circle" class="metric-icon success"></i>
+                            </div>
+                            <h4>ML Detection Accuracy</h4>
+                            <p>Validated on benchmark NIDS datasets (CIC-IDS) with near-zero false positive rates after threshold tuning.</p>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-header">
+                                <h3 class="metric-val text-accent">&lt; 1 ms</h3>
+                                <i data-lucide="zap" class="metric-icon accent"></i>
+                            </div>
+                            <h4>Detection Inference Latency</h4>
+                            <p>Lightweight Random Forest inference per flow packet ensures zero network bottlenecks on typical hardware.</p>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-header">
+                                <h3 class="metric-val text-primary">100%</h3>
+                                <i data-lucide="lock" class="metric-icon primary"></i>
+                            </div>
+                            <h4>Privacy-First Metadata Analysis</h4>
+                            <p>Analyzes packet headers & timing without inspecting sensitive encrypted payloads (GDPR & HIPAA compliant).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Competitive Advantage -->
+            <section class="slide" id="slide-7" data-slide-index="7">
+                <div class="slide-header">
+                    <span class="slide-num-tag">07</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Competitive Landscape & Defensive Moat</h2>
+                        <p class="slide-subtitle">Positioned at the Intersection of ML Anomaly Detection & Natural Language XAI</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Feature / Metric</th>
+                                <th>Legacy IDS (Snort/Zeek)</th>
+                                <th>Enterprise SIEM (Splunk/CrowdStrike)</th>
+                                <th>Enterprise NDR (Darktrace)</th>
+                                <th class="highlight-col">KairosAI (Ours)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Plain-English XAI Explanations</strong></td>
+                                <td class="text-danger"><i data-lucide="x"></i> No (Raw Logs)</td>
+                                <td class="text-warning"><i data-lucide="minus"></i> Limited Jargon</td>
+                                <td class="text-warning"><i data-lucide="minus"></i> Proprietary Alerts</td>
+                                <td class="highlight-col text-success"><strong><i data-lucide="check"></i> Built-in LLM XAI</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Target Market</strong></td>
+                                <td>DevOps / Enterprise</td>
+                                <td>Fortune 2000 Enterprises</td>
+                                <td>Enterprise SOCs</td>
+                                <td class="highlight-col text-primary"><strong>SMBs & Education</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Annual Cost (TCO)</strong></td>
+                                <td>Open-Source + Analyst Cost ($150k+)</td>
+                                <td>$100,000+ / Year</td>
+                                <td>$60,000+ / Year</td>
+                                <td class="highlight-col text-success"><strong>&lt; $3,600 / Year</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Malware-Free Attack Detection</strong></td>
+                                <td class="text-danger"><i data-lucide="x"></i> Signature Only</td>
+                                <td class="text-success"><i data-lucide="check"></i> Yes</td>
+                                <td class="text-success"><i data-lucide="check"></i> Yes</td>
+                                <td class="highlight-col text-success"><strong><i data-lucide="check"></i> Isolation Forest Anomaly</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Setup & Deployment Time</strong></td>
+                                <td>Weeks of Rule Tuning</td>
+                                <td>Months of SIEM Integration</td>
+                                <td>Weeks of Passive Learning</td>
+                                <td class="highlight-col text-success"><strong>&lt; 15 Minutes (Plug & Play)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="moat-pills-row">
+                    <div class="moat-pill">
+                        <i data-lucide="shield"></i> <strong>Key Moat 1:</strong> Proprietary Security Prompt Library tailored for network anomaly interpretation.
+                    </div>
+                    <div class="moat-pill">
+                        <i data-lucide="zap"></i> <strong>Key Moat 2:</strong> Ultra-fast hybrid supervised/unsupervised pipeline optimized for CPU edge nodes.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: Business Model -->
+            <section class="slide" id="slide-8" data-slide-index="8">
+                <div class="slide-header">
+                    <span class="slide-num-tag">08</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Business Model & Go-To-Market Strategy</h2>
+                        <p class="slide-subtitle">SaaS Subscription Model Paired with Channel Partner Distribution</p>
+                    </div>
+                </div>
+
+                <div class="grid-3-col">
+                    <div class="pricing-card">
+                        <span class="plan-badge">Freemium</span>
+                        <h3 class="plan-title">Community Sensor</h3>
+                        <div class="plan-price">$0 <span>/ forever</span></div>
+                        <p class="plan-desc">For university labs, security researchers, and micro-networks.</p>
+                        <ul class="plan-features">
+                            <li><i data-lucide="check"></i> Single Sensor Sniffing</li>
+                            <li><i data-lucide="check"></i> Basic Random Forest ML</li>
+                            <li><i data-lucide="check"></i> Community Threat Feeds</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card highlight-plan">
+                        <span class="plan-badge primary">Most Popular</span>
+                        <h3 class="plan-title">Pro SMB</h3>
+                        <div class="plan-price">$299 <span>/ month / site</span></div>
+                        <p class="plan-desc">Full security stack for small-to-medium businesses.</p>
+                        <ul class="plan-features">
+                            <li><i data-lucide="check"></i> Real-time NIDS (Up to 1Gbps)</li>
+                            <li><i data-lucide="check"></i> Dual ML (RF + Isolation Forest)</li>
+                            <li><i data-lucide="check"></i> <strong>Local Llama 3 XAI Engine</strong></li>
+                            <li><i data-lucide="check"></i> Automated PDF Incident Reports</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <span class="plan-badge accent">Enterprise</span>
+                        <h3 class="plan-title">MSP Partner Portal</h3>
+                        <div class="plan-price">$999 <span>/ month</span></div>
+                        <p class="plan-desc">For Managed Service Providers managing multiple client sites.</p>
+                        <ul class="plan-features">
+                            <li><i data-lucide="check"></i> Multi-Tenant Central Dashboard</li>
+                            <li><i data-lucide="check"></i> White-Labeled Incident Reports</li>
+                            <li><i data-lucide="check"></i> API Integrations (Slack/Teams)</li>
+                            <li><i data-lucide="check"></i> Dedicated Support & SLA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-box mt-3">
+                    <h4 class="card-heading-sm"><i data-lucide="share-2"></i> Go-To-Market Acceleration Drivers</h4>
+                    <div class="gtm-drivers">
+                        <div class="driver-item">
+                            <strong>1. MSP Partner Channel:</strong> Partnering with regional MSPs who bundling KairosAI into monthly managed IT suites for 20+ clients each.
+                        </div>
+                        <div class="driver-item">
+                            <strong>2. Open-Source Bottom-Up Virality:</strong> Releasing the core packet capture tool on GitHub to build developer and university lab trust.
+                        </div>
+                        <div class="driver-item">
+                            <strong>3. Direct Sales in Regulated SMBs:</strong> Targeted outreach to high-risk healthcare clinics, local banks, and K-12 school districts.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: Team & Roadmap -->
+            <section class="slide" id="slide-9" data-slide-index="9">
+                <div class="slide-header">
+                    <span class="slide-num-tag">09</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Team Execution & 12-Month Roadmap</h2>
+                        <p class="slide-subtitle">Balanced Technical Team Ready to Execute Key Product Milestones</p>
+                    </div>
+                </div>
+
+                <div class="grid-4-team">
+                    <div class="team-card">
+                        <div class="avatar-placeholder">XYZ</div>
+                        <h4 class="team-name">XYZ</h4>
+                        <span class="team-role">Backend & Architecture Lead</span>
+                        <p class="team-bio">FastAPI, Scapy packet capture engine, database schema, and high-performance API design.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="avatar-placeholder">ABC</div>
+                        <h4 class="team-name">ABC</h4>
+                        <span class="team-role">Frontend & UI Lead</span>
+                        <p class="team-bio">React dashboard development, Tailwind CSS design system, Chart.js & React Flow topology graphs.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="avatar-placeholder">DEF</div>
+                        <h4 class="team-name">DEF</h4>
+                        <span class="team-role">AI/ML Threat Specialist</span>
+                        <p class="team-bio">Scikit-Learn feature engineering, model training (RF/IF), and Llama 3 XAI prompt design.</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="avatar-placeholder">GHI</div>
+                        <h4 class="team-name">GHI</h4>
+                        <span class="team-role">QA & Security Lead</span>
+                        <p class="team-bio">Integration testing, attack simulation, risk evaluation, and comprehensive project documentation.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-container mt-4">
+                    <h3 class="roadmap-heading"><i data-lucide="map-pin"></i> 12-Month Execution Roadmap</h3>
+                    <div class="roadmap-steps">
+                        <div class="roadmap-step">
+                            <span class="roadmap-q">Q1 2026</span>
+                            <h4>MVP Prototype</h4>
+                            <p>Scapy packet capture + RF/IF models + local Ollama Llama 3 integration.</p>
+                        </div>
+                        <div class="roadmap-step highlight-q">
+                            <span class="roadmap-q">Q2 2026</span>
+                            <h4>SMB Beta Trial</h4>
+                            <p>Deploy in 20 SMB sites & 5 University Computer Labs; refine XAI prompts.</p>
+                        </div>
+                        <div class="roadmap-step">
+                            <span class="roadmap-q">Q3 2026</span>
+                            <h4>MSP Portal Launch</h4>
+                            <p>Multi-tenant central dashboard, white-labeling, and automated API webhook alerts.</p>
+                        </div>
+                        <div class="roadmap-step">
+                            <span class="roadmap-q">Q4 2026</span>
+                            <h4>Zero Trust & Edge AI</h4>
+                            <p>Cloud SIEM connectors, federated learning nodes, and lightweight IoT sensors.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: Financial Vision & Investment Ask -->
+            <section class="slide" id="slide-10" data-slide-index="10">
+                <div class="slide-header">
+                    <span class="slide-num-tag">10</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Financial Vision & Investment Ask</h2>
+                        <p class="slide-subtitle">Seeking $750,000 Seed Funding to Scale Product & Channel Partnerships</p>
+                    </div>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="card-box flex-center">
+                        <div class="ask-banner">
+                            <span class="ask-tag">SEED ROUND ASK</span>
+                            <h3 class="ask-amount">$750,000</h3>
+                            <p class="ask-sub">18-Month Runway to Reach $1.5M ARR</p>
+                        </div>
+
+                        <div class="chart-container-box-lg mt-2">
+                            <canvas id="chart-ask"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card-box">
+                        <h3 class="card-heading"><i data-lucide="pie-chart"></i> Use of Funds & Strategic Outcomes</h3>
+                        
+                        <div class="use-list">
+                            <div class="use-item">
+                                <div class="use-dot primary"></div>
+                                <div>
+                                    <h4 class="use-title">50% — R&D, AI & Product Engineering</h4>
+                                    <p class="use-text">Expand core engineering team; optimize local LLM inference speed; build multi-tenant MSP console & automated firewall block APIs.</p>
+                                </div>
+                            </div>
+                            <div class="use-item">
+                                <div class="use-dot success"></div>
+                                <div>
+                                    <h4 class="use-title">30% — Go-To-Market & MSP Sales</h4>
+                                    <p class="use-text">Hire 2 MSP partner managers; attend major IT/security expos; launch developer community marketing & GitHub sponsorships.</p>
+                                </div>
+                            </div>
+                            <div class="use-item">
+                                <div class="use-dot warning"></div>
+                                <div>
+                                    <h4 class="use-title">20% — Security Compliance & Operations</h4>
+                                    <p class="use-text">Achieve SOC 2 Type II certification, conduct third-party security audits, and cover legal & administrative operations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vision-quote mt-3">
+                            <i data-lucide="quote" class="quote-icon"></i>
+                            <p><strong>Long-Term Vision:</strong> Become the standard AI Security Analyst for over 1,000,000 underserved SMBs and educational institutions worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Bottom Floating Navigation Bar -->
+    <div class="bottom-controls">
+        <button class="ctrl-btn" id="btn-first" title="First Slide (Home)"><i data-lucide="chevrons-left"></i></button>
+        <button class="ctrl-btn" id="btn-prev" title="Previous Slide (←)"><i data-lucide="chevron-left"></i> Prev</button>
+        
+        <div class="slide-thumbnails-strip" id="thumbnail-strip">
+            <!-- Thumbnails injected via JS -->
+        </div>
+
+        <button class="ctrl-btn" id="btn-next" title="Next Slide (→)">Next <i data-lucide="chevron-right"></i></button>
+        <button class="ctrl-btn" id="btn-last" title="Last Slide (End)"><i data-lucide="chevrons-right"></i></button>
+    </div>
+
+    <!-- Speaker Notes Drawer Modal -->
+    <div class="speaker-notes-modal" id="speaker-notes-modal">
+        <div class="notes-header">
+            <h3><i data-lucide="file-text"></i> Speaker Notes & Investor Q&A Cues — Slide <span id="notes-slide-num">1</span></h3>
+            <button class="close-notes-btn" id="close-notes-btn"><i data-lucide="x"></i></button>
+        </div>
+        <div class="notes-content" id="notes-content">
+            <!-- Notes text injected dynamically -->
+        </div>
+    </div>
+
+    <!-- Slide Overview Grid Overlay -->
+    <div class="overview-overlay" id="overview-overlay">
+        <div class="overview-header">
+            <h2><i data-lucide="grid"></i> Slide Navigator</h2>
+            <button class="close-overview-btn" id="close-overview-btn"><i data-lucide="x"></i></button>
+        </div>
+        <div class="overview-grid" id="overview-grid">
+            <!-- 10 Slide Cards injected dynamically -->
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
