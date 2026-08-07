@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="team-footer-line">
-                            <strong>Team:</strong> XYZ (Backend Lead) • ABC (UI/UX) • DEF (AI/ML) • GHI (QA & Security)
+                            <strong>Team:</strong> Meet Shah (Backend Lead) • Pranav Mishra (Frontend Lead) • Jainam Dave (AI/ML) • Bhaavya Mehta (QA & Security)
                         </div>
                     </div>
                     <div class="hero-right">
@@ -245,44 +245,71 @@
                     </div>
                 </div>
 
-                <div class="grid-3-tam">
-                    <div class="tam-box">
-                        <span class="tam-badge">TAM</span>
-                        <h3 class="tam-value">$50.2 Billion</h3>
-                        <h4 class="tam-label">Global SMB Cybersecurity Market</h4>
-                        <p class="tam-desc">Total worldwide spending by small and mid-sized enterprises on cybersecurity software and services by 2026.</p>
+                <div class="slide-4-container">
+                    <!-- Top Row: TAM / SAM / SOM Metrics -->
+                    <div class="grid-3-tam">
+                        <div class="tam-box">
+                            <div class="tam-header-row">
+                                <span class="tam-badge">TAM</span>
+                                <i data-lucide="globe" style="width: 20px; height: 20px; color: var(--text-light);"></i>
+                            </div>
+                            <h3 class="tam-value">$50.2 Billion</h3>
+                            <h4 class="tam-label">Global SMB Cybersecurity Market</h4>
+                            <p class="tam-desc">Total worldwide spending by small and mid-sized enterprises on cybersecurity software and services by 2026.</p>
+                        </div>
+
+                        <div class="tam-box highlight-tam">
+                            <div class="tam-header-row">
+                                <span class="tam-badge primary">SAM</span>
+                                <i data-lucide="target" style="width: 20px; height: 20px; color: var(--primary);"></i>
+                            </div>
+                            <h3 class="tam-value text-accent">$12.4 Billion</h3>
+                            <h4 class="tam-label">SMB Network Intrusion & SOC Market</h4>
+                            <p class="tam-desc">Addressable segment focused on network detection, threat intelligence, and log monitoring for companies under 1,000 employees.</p>
+                        </div>
+
+                        <div class="tam-box">
+                            <div class="tam-header-row">
+                                <span class="tam-badge">SOM</span>
+                                <i data-lucide="zap" style="width: 20px; height: 20px; color: var(--text-light);"></i>
+                            </div>
+                            <h3 class="tam-value">$450 Million</h3>
+                            <h4 class="tam-label">Initial Serviceable Market</h4>
+                            <p class="tam-desc">Higher-Ed Computer Labs, Regional Managed Service Providers (MSPs), and high-risk Fintech/Healthcare SMBs.</p>
+                        </div>
                     </div>
 
-                    <div class="tam-box highlight-tam">
-                        <span class="tam-badge primary">SAM</span>
-                        <h3 class="tam-value text-accent">$12.4 Billion</h3>
-                        <h4 class="tam-label">SMB Network Intrusion & SOC Market</h4>
-                        <p class="tam-desc">Addressable segment focused on network detection, threat intelligence, and log monitoring for companies with <1,000 employees.</p>
-                    </div>
+                    <!-- Bottom Row: Target Verticals -->
+                    <div class="grid-3-verticals">
+                        <div class="vertical-card">
+                            <div class="vertical-icon-box">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div class="vertical-card-content">
+                                <h4>Small & Medium Enterprises</h4>
+                                <p>Companies with 10–500 employees lacking a dedicated SOC team, requiring zero-overhead plug-and-play protection.</p>
+                            </div>
+                        </div>
 
-                    <div class="tam-box">
-                        <span class="tam-badge">SOM</span>
-                        <h3 class="tam-value">$450 Million</h3>
-                        <h4 class="tam-label">Initial Serviceable Market</h4>
-                        <p class="tam-desc">Higher-Ed Computer Labs, Regional Managed Service Providers (MSPs), and high-risk Fintech/Healthcare SMBs.</p>
-                    </div>
-                </div>
+                        <div class="vertical-card">
+                            <div class="vertical-icon-box">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div class="vertical-card-content">
+                                <h4>Educational Institutions</h4>
+                                <p>Universities, high schools, and computer science labs needing affordable NIDS with teaching-friendly XAI explanations.</p>
+                            </div>
+                        </div>
 
-                <div class="grid-3-col mt-4">
-                    <div class="card-box-sm">
-                        <div class="vertical-icon"><i data-lucide="building-2"></i></div>
-                        <h4>Small & Medium Enterprises</h4>
-                        <p>Companies with 10–500 employees lacking a dedicated SOC team, requiring zero-overhead plug-and-play protection.</p>
-                    </div>
-                    <div class="card-box-sm">
-                        <div class="vertical-icon"><i data-lucide="graduation-cap"></i></div>
-                        <h4>Educational Institutions</h4>
-                        <p>Universities, high schools, and computer science labs needing affordable NIDS with teaching-friendly XAI explanations.</p>
-                    </div>
-                    <div class="card-box-sm">
-                        <div class="vertical-icon"><i data-lucide="server"></i></div>
-                        <h4>Managed Service Providers (MSPs)</h4>
-                        <p>MSPs looking for a multi-tenant, white-labeled threat detection engine to bundle for hundreds of client sites.</p>
+                        <div class="vertical-card">
+                            <div class="vertical-icon-box">
+                                <i data-lucide="server"></i>
+                            </div>
+                            <div class="vertical-card-content">
+                                <h4>Managed Service Providers (MSPs)</h4>
+                                <p>MSPs looking for a multi-tenant, white-labeled threat detection engine to bundle for hundreds of client sites.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -354,10 +381,293 @@
                 </div>
             </section>
 
-            <!-- SLIDE 6: Product Capabilities -->
+            <!-- SLIDE 6: Demo Applications Showcase (NEW) -->
             <section class="slide" id="slide-6" data-slide-index="6">
                 <div class="slide-header">
                     <span class="slide-num-tag">06</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Investor Demo Applications & Ecosystem</h2>
+                        <p class="slide-subtitle">5 Specialized Applications Engineered to Demonstrate End-to-End KairosAI Defense Capabilities</p>
+                    </div>
+                </div>
+
+                <div class="grid-demo-showcase">
+                    <!-- Left Side: Table & App Selection List -->
+                    <div class="app-list-container">
+                        <div class="app-table-header">
+                            <span>Application</span>
+                            <span style="text-align: center;">Needed?</span>
+                            <span style="text-align: right;">Priority</span>
+                        </div>
+                        <div class="app-table-list">
+                            <!-- App Item 1 -->
+                            <div class="app-item-card active" data-app-target="customer-app">
+                                <div class="app-info-group">
+                                    <div class="app-num-badge">1</div>
+                                    <div>
+                                        <h4 class="app-title-text">Customer App (E-commerce)</h4>
+                                        <p class="app-desc-text">Storefront simulating real user traffic & target vectors</p>
+                                    </div>
+                                </div>
+                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
+                                <div class="app-priority-stars">
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                </div>
+                            </div>
+
+                            <!-- App Item 2 -->
+                            <div class="app-item-card" data-app-target="security-dashboard">
+                                <div class="app-info-group">
+                                    <div class="app-num-badge">2</div>
+                                    <div>
+                                        <h4 class="app-title-text">Security Dashboard (Main Product)</h4>
+                                        <p class="app-desc-text">Central SOC control plane with live stream & LLM XAI</p>
+                                    </div>
+                                </div>
+                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
+                                <div class="app-priority-stars">
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                </div>
+                            </div>
+
+                            <!-- App Item 3 -->
+                            <div class="app-item-card" data-app-target="attack-simulator">
+                                <div class="app-info-group">
+                                    <div class="app-num-badge">3</div>
+                                    <div>
+                                        <h4 class="app-title-text">Attack Simulator</h4>
+                                        <p class="app-desc-text">Adversary engine triggering synthetic floods & exploits</p>
+                                    </div>
+                                </div>
+                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
+                                <div class="app-priority-stars">
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                </div>
+                            </div>
+
+                            <!-- App Item 4 -->
+                            <div class="app-item-card" data-app-target="developer-portal">
+                                <div class="app-info-group">
+                                    <div class="app-num-badge">4</div>
+                                    <div>
+                                        <h4 class="app-title-text">Developer Portal</h4>
+                                        <p class="app-desc-text">API keys, webhooks, SDK docs & custom security rules</p>
+                                    </div>
+                                </div>
+                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
+                                <div class="app-priority-stars">
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-empty"></i>
+                                </div>
+                            </div>
+
+                            <!-- App Item 5 -->
+                            <div class="app-item-card" data-app-target="mobile-app">
+                                <div class="app-info-group">
+                                    <div class="app-num-badge">5</div>
+                                    <div>
+                                        <h4 class="app-title-text">Mobile App</h4>
+                                        <p class="app-desc-text">On-the-go push notifications & instant triage response</p>
+                                    </div>
+                                </div>
+                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes (rec)</div>
+                                <div class="app-priority-stars">
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-fill"></i>
+                                    <i data-lucide="star" class="star-empty"></i>
+                                    <i data-lucide="star" class="star-empty"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Interactive Display Space for Live App Demo Preview -->
+                    <div class="demo-display-wrapper">
+                        <div class="demo-display-header">
+                            <div class="demo-display-title-group">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="demo-url-bar" id="demo-url-text">https://demo.kairosstore.io/checkout</span>
+                            </div>
+                            <span class="demo-live-badge"><i data-lucide="play-circle"></i> DEMO DISPLAY SPACE</span>
+                        </div>
+                        <div class="demo-display-body">
+                            <!-- PANEL 1: Customer App -->
+                            <div class="demo-panel active" id="panel-customer-app">
+                                <div class="mock-browser-hero">
+                                    <div class="mock-nav">
+                                        <span class="mock-brand"><i data-lucide="shopping-bag"></i> KairosStore</span>
+                                        <div class="mock-nav-links">
+                                            <span class="active">Shop</span>
+                                            <span>Cart (2)</span>
+                                            <span>Checkout</span>
+                                        </div>
+                                        <span class="mock-status-pill success"><i data-lucide="shield-check"></i> KairosAI Protection ON</span>
+                                    </div>
+                                    <div class="mock-store-grid">
+                                        <div class="mock-product-card">
+                                            <div class="mock-img-placeholder"><i data-lucide="cpu"></i></div>
+                                            <div class="mock-prod-title">Enterprise IoT Gateway</div>
+                                            <div class="mock-prod-price">$299.00</div>
+                                            <button class="mock-buy-btn">Buy Now</button>
+                                        </div>
+                                        <div class="mock-product-card">
+                                            <div class="mock-img-placeholder"><i data-lucide="wifi"></i></div>
+                                            <div class="mock-prod-title">Secure WiFi 6 Node</div>
+                                            <div class="mock-prod-price">$149.00</div>
+                                            <button class="mock-buy-btn">Buy Now</button>
+                                        </div>
+                                        <div class="mock-product-card">
+                                            <div class="mock-img-placeholder"><i data-lucide="hard-drive"></i></div>
+                                            <div class="mock-prod-title">Encrypted Storage Array</div>
+                                            <div class="mock-prod-price">$599.00</div>
+                                            <button class="mock-buy-btn">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="mock-telemetry-banner">
+                                        <i data-lucide="activity" class="banner-icon"></i>
+                                        <span><strong>Live Traffic Telemetry:</strong> 184 HTTP requests/sec streamed to KairosAI PyShark Sniffer. Zero user privacy exposure.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PANEL 2: Security Dashboard -->
+                            <div class="demo-panel" id="panel-security-dashboard">
+                                <div class="mock-soc-grid">
+                                    <div class="soc-widget danger">
+                                        <div class="soc-widget-hdr">
+                                            <span><i data-lucide="alert-triangle"></i> ACTIVE INCIDENTS</span>
+                                            <span class="soc-badge danger">CRITICAL</span>
+                                        </div>
+                                        <div class="soc-big-val">03</div>
+                                        <p class="soc-sub">High Severity Threat Scans</p>
+                                    </div>
+                                    <div class="soc-widget primary">
+                                        <div class="soc-widget-hdr">
+                                            <span><i data-lucide="radio"></i> SNIFFER RATE</span>
+                                            <span class="soc-badge primary">REALTIME</span>
+                                        </div>
+                                        <div class="soc-big-val">4.2k</div>
+                                        <p class="soc-sub">Packets / Second Captured</p>
+                                    </div>
+                                    <div class="soc-widget success">
+                                        <div class="soc-widget-hdr">
+                                            <span><i data-lucide="brain"></i> XAI ACCURACY</span>
+                                            <span class="soc-badge success">LLAMA 3</span>
+                                        </div>
+                                        <div class="soc-big-val">99.4%</div>
+                                        <p class="soc-sub">Confidence Score</p>
+                                    </div>
+                                </div>
+                                <div class="soc-xai-preview">
+                                    <div class="soc-xai-hdr"><i data-lucide="sparkles"></i> Llama 3 Natural Language Explanation</div>
+                                    <div class="soc-xai-body">
+                                        "Detected automated credential stuffing on <strong>/api/v1/auth/login</strong> from IP 198.51.100.42 (120 failed logins/min). Random Forest entropy score: 0.96. <em>Automated recommendation: Block source IP range and enforce CAPTCHA.</em>"
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PANEL 3: Attack Simulator -->
+                            <div class="demo-panel" id="panel-attack-simulator">
+                                <div class="sim-controls-card">
+                                    <div class="sim-hdr"><i data-lucide="crosshair"></i> Adversary Threat Generator Controls</div>
+                                    <div class="sim-vector-grid">
+                                        <button class="sim-vector-btn active"><i data-lucide="zap"></i> SYN Flood DDoS</button>
+                                        <button class="sim-vector-btn"><i data-lucide="terminal"></i> SQL Injection</button>
+                                        <button class="sim-vector-btn"><i data-lucide="search"></i> Nmap Port Scan</button>
+                                        <button class="sim-vector-btn"><i data-lucide="key"></i> Brute Force SSH</button>
+                                    </div>
+                                    <div class="sim-terminal-box">
+                                        <div class="term-line prompt">$ python attack_sim.py --target 192.168.1.1 --vector SYN_FLOOD --rate 500p/s</div>
+                                        <div class="term-line success">[+] Launching synthetic SYN flood packets on port 443...</div>
+                                        <div class="term-line warning">[!] KairosAI Anomaly Engine detected flow spike within 420ms!</div>
+                                        <div class="term-line danger">[X] Isolation Forest score: 0.98. Attack signature automatically isolated.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PANEL 4: Developer Portal -->
+                            <div class="demo-panel" id="panel-developer-portal">
+                                <div class="dev-portal-card">
+                                    <div class="dev-hdr">
+                                        <div class="dev-title"><i data-lucide="code-2"></i> REST API & Webhooks Integration</div>
+                                        <span class="dev-tag">v1.2 Stable</span>
+                                    </div>
+                                    <div class="dev-code-preview text-mono">
+<span class="code-comment"># Query active threat alerts via KairosAI REST API</span>
+<span class="code-keyword">import</span> requests
+
+headers = {<span class="code-str">"Authorization"</span>: <span class="code-str">"Bearer kairos_live_sec_key_99x"</span>}
+response = requests.get(<span class="code-str">"https://api.kairosai.io/v1/incidents/active"</span>, headers=headers)
+print(response.json())
+                                    </div>
+                                    <div class="dev-json-response text-mono">
+{
+  <span class="code-str">"status"</span>: <span class="code-str">"success"</span>,
+  <span class="code-str">"active_alerts"</span>: 1,
+  <span class="code-str">"primary_incident"</span>: { <span class="code-str">"type"</span>: <span class="code-str">"SYN Scan"</span>, <span class="code-str">"threat_level"</span>: <span class="code-str">"HIGH"</span>, <span class="code-str">"mitigated"</span>: true }
+}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PANEL 5: Mobile App -->
+                            <div class="demo-panel" id="panel-mobile-app">
+                                <div class="mobile-frame-wrapper">
+                                    <div class="mobile-device">
+                                        <div class="mobile-screen">
+                                            <div class="mobile-header">
+                                                <span>9:41</span>
+                                                <i data-lucide="wifi"></i>
+                                            </div>
+                                            <div class="mobile-app-hdr">
+                                                <i data-lucide="shield-alert" class="text-accent"></i>
+                                                <span>KairosAI Mobile SOC</span>
+                                            </div>
+                                            <div class="mobile-alert-card danger">
+                                                <div class="mobile-alert-hdr">
+                                                    <span class="badge danger">CRITICAL ALERT</span>
+                                                    <span class="time">Just now</span>
+                                                </div>
+                                                <h4>Port Scan Blocked</h4>
+                                                <p>Source: 192.168.1.105 (Dev Workstation)</p>
+                                                <div class="mobile-action-btn">Isolate Host Now</div>
+                                            </div>
+                                            <div class="mobile-stat-row">
+                                                <div class="m-stat"><span>Status</span><strong>Protected</strong></div>
+                                                <div class="m-stat"><span>Latency</span><strong>&lt;1ms</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Product Capabilities -->
+            <section class="slide" id="slide-7" data-slide-index="7">
+                <div class="slide-header">
+                    <span class="slide-num-tag">07</span>
                     <div class="slide-title-group">
                         <h2 class="slide-title">Product Capabilities & Performance Metrics</h2>
                         <p class="slide-subtitle">Enterprise-Grade Performance Engineered for Resource-Constrained Environments</p>
@@ -430,10 +740,10 @@
                 </div>
             </section>
 
-            <!-- SLIDE 7: Competitive Advantage -->
-            <section class="slide" id="slide-7" data-slide-index="7">
+            <!-- SLIDE 8: Competitive Advantage -->
+            <section class="slide" id="slide-8" data-slide-index="8">
                 <div class="slide-header">
-                    <span class="slide-num-tag">07</span>
+                    <span class="slide-num-tag">08</span>
                     <div class="slide-title-group">
                         <h2 class="slide-title">Competitive Landscape & Defensive Moat</h2>
                         <p class="slide-subtitle">Positioned at the Intersection of ML Anomaly Detection & Natural Language XAI</p>
@@ -501,192 +811,158 @@
                 </div>
             </section>
 
-            <!-- SLIDE 8: Business Model -->
-            <section class="slide" id="slide-8" data-slide-index="8">
-                <div class="slide-header">
-                    <span class="slide-num-tag">08</span>
-                    <div class="slide-title-group">
-                        <h2 class="slide-title">Business Model & Go-To-Market Strategy</h2>
-                        <p class="slide-subtitle">SaaS Subscription Model Paired with Channel Partner Distribution</p>
-                    </div>
-                </div>
-
-                <div class="grid-3-col">
-                    <div class="pricing-card">
-                        <span class="plan-badge">Freemium</span>
-                        <h3 class="plan-title">Community Sensor</h3>
-                        <div class="plan-price">$0 <span>/ forever</span></div>
-                        <p class="plan-desc">For university labs, security researchers, and micro-networks.</p>
-                        <ul class="plan-features">
-                            <li><i data-lucide="check"></i> Single Sensor Sniffing</li>
-                            <li><i data-lucide="check"></i> Basic Random Forest ML</li>
-                            <li><i data-lucide="check"></i> Community Threat Feeds</li>
-                        </ul>
-                    </div>
-
-                    <div class="pricing-card highlight-plan">
-                        <span class="plan-badge primary">Most Popular</span>
-                        <h3 class="plan-title">Pro SMB</h3>
-                        <div class="plan-price">$299 <span>/ month / site</span></div>
-                        <p class="plan-desc">Full security stack for small-to-medium businesses.</p>
-                        <ul class="plan-features">
-                            <li><i data-lucide="check"></i> Real-time NIDS (Up to 1Gbps)</li>
-                            <li><i data-lucide="check"></i> Dual ML (RF + Isolation Forest)</li>
-                            <li><i data-lucide="check"></i> <strong>Local Llama 3 XAI Engine</strong></li>
-                            <li><i data-lucide="check"></i> Automated PDF Incident Reports</li>
-                        </ul>
-                    </div>
-
-                    <div class="pricing-card">
-                        <span class="plan-badge accent">Enterprise</span>
-                        <h3 class="plan-title">MSP Partner Portal</h3>
-                        <div class="plan-price">$999 <span>/ month</span></div>
-                        <p class="plan-desc">For Managed Service Providers managing multiple client sites.</p>
-                        <ul class="plan-features">
-                            <li><i data-lucide="check"></i> Multi-Tenant Central Dashboard</li>
-                            <li><i data-lucide="check"></i> White-Labeled Incident Reports</li>
-                            <li><i data-lucide="check"></i> API Integrations (Slack/Teams)</li>
-                            <li><i data-lucide="check"></i> Dedicated Support & SLA</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card-box mt-3">
-                    <h4 class="card-heading-sm"><i data-lucide="share-2"></i> Go-To-Market Acceleration Drivers</h4>
-                    <div class="gtm-drivers">
-                        <div class="driver-item">
-                            <strong>1. MSP Partner Channel:</strong> Partnering with regional MSPs who bundling KairosAI into monthly managed IT suites for 20+ clients each.
-                        </div>
-                        <div class="driver-item">
-                            <strong>2. Open-Source Bottom-Up Virality:</strong> Releasing the core packet capture tool on GitHub to build developer and university lab trust.
-                        </div>
-                        <div class="driver-item">
-                            <strong>3. Direct Sales in Regulated SMBs:</strong> Targeted outreach to high-risk healthcare clinics, local banks, and K-12 school districts.
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SLIDE 9: Team & Roadmap -->
+            <!-- SLIDE 9: Team Execution -->
             <section class="slide" id="slide-9" data-slide-index="9">
                 <div class="slide-header">
                     <span class="slide-num-tag">09</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Team Execution & 12-Month Roadmap</h2>
-                        <p class="slide-subtitle">Balanced Technical Team Ready to Execute Key Product Milestones</p>
+                        <h2 class="slide-title">Team Execution & Technical Ownership</h2>
+                        <p class="slide-subtitle">Role Alignment & Comprehensive Task Ownership Across Core System Engineering</p>
                     </div>
                 </div>
 
                 <div class="grid-4-team">
+                    <!-- Meet Shah -->
                     <div class="team-card">
-                        <div class="avatar-placeholder">XYZ</div>
-                        <h4 class="team-name">XYZ</h4>
-                        <span class="team-role">Backend & Architecture Lead</span>
-                        <p class="team-bio">FastAPI, Scapy packet capture engine, database schema, and high-performance API design.</p>
+                        <div class="team-card-header">
+                            <div class="avatar-placeholder ms">MS</div>
+                            <h4 class="team-name">Meet Shah</h4>
+                            <span class="team-role-tag primary"><i data-lucide="server"></i> Backend Lead</span>
+                        </div>
+                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
+                        <ul class="team-task-list">
+                            <li class="team-task-item"><strong>Packet Sniffing Engine:</strong> Implemented Scapy & PyShark capture pipeline for 4k+ pkts/sec real-time extraction.</li>
+                            <li class="team-task-item"><strong>Async FastAPI Architecture:</strong> Built high-concurrency REST server with SQLite persistence & fast routing.</li>
+                            <li class="team-task-item"><strong>API & Webhook Infra:</strong> Engineered REST endpoints, JWT auth, and live alert webhook dispatchers.</li>
+                            <li class="team-task-item"><strong>Data Schema & Metrics:</strong> Defined 5-tuple flow models, payload entropy features, and DB migrations.</li>
+                        </ul>
                     </div>
 
+                    <!-- Pranav Mishra -->
                     <div class="team-card">
-                        <div class="avatar-placeholder">ABC</div>
-                        <h4 class="team-name">ABC</h4>
-                        <span class="team-role">Frontend & UI Lead</span>
-                        <p class="team-bio">React dashboard development, Tailwind CSS design system, Chart.js & React Flow topology graphs.</p>
+                        <div class="team-card-header">
+                            <div class="avatar-placeholder pm">PM</div>
+                            <h4 class="team-name">Pranav Mishra</h4>
+                            <span class="team-role-tag accent"><i data-lucide="layout"></i> Frontend Lead</span>
+                        </div>
+                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
+                        <ul class="team-task-list">
+                            <li class="team-task-item"><strong>React SOC Control Plane:</strong> Built real-time streaming UI with network flow graphs (React Flow).</li>
+                            <li class="team-task-item"><strong>Design System & Tailwind:</strong> Crafted 1920x1080 canvas engine, CSS tokens, and Chart.js feeds.</li>
+                            <li class="team-task-item"><strong>5 Investor Demo Apps:</strong> Built interactive storefront, SOC panel, simulator, dev portal & mobile UI.</li>
+                            <li class="team-task-item"><strong>Interactive UX Polish:</strong> Integrated live packet counters, status badges, and overview drawer.</li>
+                        </ul>
                     </div>
 
+                    <!-- Jainam Dave -->
                     <div class="team-card">
-                        <div class="avatar-placeholder">DEF</div>
-                        <h4 class="team-name">DEF</h4>
-                        <span class="team-role">AI/ML Threat Specialist</span>
-                        <p class="team-bio">Scikit-Learn feature engineering, model training (RF/IF), and Llama 3 XAI prompt design.</p>
+                        <div class="team-card-header">
+                            <div class="avatar-placeholder jd">JD</div>
+                            <h4 class="team-name">Jainam Dave</h4>
+                            <span class="team-role-tag success"><i data-lucide="cpu"></i> AI/ML Specialist</span>
+                        </div>
+                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
+                        <ul class="team-task-list">
+                            <li class="team-task-item"><strong>Dual ML Engine:</strong> Trained Random Forest (99.2% accuracy) & Isolation Forest for zero-day threats.</li>
+                            <li class="team-task-item"><strong>LLM XAI Integration:</strong> Engineered local Llama 3 prompts (Ollama API) to translate logs into plain English.</li>
+                            <li class="team-task-item"><strong>Dataset Training & Tuning:</strong> Processed CIC-IDS benchmarks to suppress false positives below 0.8%.</li>
+                            <li class="team-task-item"><strong>Feature Engineering:</strong> Formulated flow duration, byte rates, packet sizes, & TCP flag vectors.</li>
+                        </ul>
                     </div>
 
+                    <!-- Bhaavya Mehta -->
                     <div class="team-card">
-                        <div class="avatar-placeholder">GHI</div>
-                        <h4 class="team-name">GHI</h4>
-                        <span class="team-role">QA & Security Lead</span>
-                        <p class="team-bio">Integration testing, attack simulation, risk evaluation, and comprehensive project documentation.</p>
-                    </div>
-                </div>
-
-                <div class="roadmap-container mt-4">
-                    <h3 class="roadmap-heading"><i data-lucide="map-pin"></i> 12-Month Execution Roadmap</h3>
-                    <div class="roadmap-steps">
-                        <div class="roadmap-step">
-                            <span class="roadmap-q">Q1 2026</span>
-                            <h4>MVP Prototype</h4>
-                            <p>Scapy packet capture + RF/IF models + local Ollama Llama 3 integration.</p>
+                        <div class="team-card-header">
+                            <div class="avatar-placeholder bm">BM</div>
+                            <h4 class="team-name">Bhaavya Mehta</h4>
+                            <span class="team-role-tag warning"><i data-lucide="shield-alert"></i> QA & Security Lead</span>
                         </div>
-                        <div class="roadmap-step highlight-q">
-                            <span class="roadmap-q">Q2 2026</span>
-                            <h4>SMB Beta Trial</h4>
-                            <p>Deploy in 20 SMB sites & 5 University Computer Labs; refine XAI prompts.</p>
-                        </div>
-                        <div class="roadmap-step">
-                            <span class="roadmap-q">Q3 2026</span>
-                            <h4>MSP Portal Launch</h4>
-                            <p>Multi-tenant central dashboard, white-labeling, and automated API webhook alerts.</p>
-                        </div>
-                        <div class="roadmap-step">
-                            <span class="roadmap-q">Q4 2026</span>
-                            <h4>Zero Trust & Edge AI</h4>
-                            <p>Cloud SIEM connectors, federated learning nodes, and lightweight IoT sensors.</p>
-                        </div>
+                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
+                        <ul class="team-task-list">
+                            <li class="team-task-item"><strong>Adversary Attack Sim:</strong> Built python attack bench for SYN floods, port scans, SQLi, & SSH brute-force.</li>
+                            <li class="team-task-item"><strong>Penetration & Privacy QA:</strong> Audited zero PII payload exposure and verified GDPR compliance.</li>
+                            <li class="team-task-item"><strong>Automated Incident Reports:</strong> Programmed PDF incident summary generator for compliance exports.</li>
+                            <li class="team-task-item"><strong>End-to-End Triage QA:</strong> Conducted system stress testing, latency profiling, & pitch documentation.</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 10: Financial Vision & Investment Ask -->
+            <!-- SLIDE 10: Conclusion & Final Closure -->
             <section class="slide" id="slide-10" data-slide-index="10">
                 <div class="slide-header">
                     <span class="slide-num-tag">10</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Financial Vision & Investment Ask</h2>
-                        <p class="slide-subtitle">Seeking $750,000 Seed Funding to Scale Product & Channel Partnerships</p>
+                        <h2 class="slide-title">Conclusion & Final Vision</h2>
+                        <p class="slide-subtitle">Transforming Network Defense Through Explainable AI & Intelligent Anomaly Detection</p>
                     </div>
                 </div>
 
-                <div class="grid-2-col">
-                    <div class="card-box flex-center">
-                        <div class="ask-banner">
-                            <span class="ask-tag">SEED ROUND ASK</span>
-                            <h3 class="ask-amount">$750,000</h3>
-                            <p class="ask-sub">18-Month Runway to Reach $1.5M ARR</p>
+                <div class="closure-grid">
+                    <!-- Left: Core Summary Cards (3 Pillars) -->
+                    <div class="closure-left-col">
+                        <div class="closure-card primary-border">
+                            <div class="closure-card-icon primary">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div class="closure-card-content">
+                                <h3>Autonomous & Real-Time Defense</h3>
+                                <p>Continuous packet sniffing & dual machine learning (Random Forest + Isolation Forest) isolate network anomalies under 1ms, protecting against zero-day threats and malware-free intrusions.</p>
+                            </div>
                         </div>
 
-                        <div class="chart-container-box-lg mt-2">
-                            <canvas id="chart-ask"></canvas>
+                        <div class="closure-card accent-border">
+                            <div class="closure-card-icon accent">
+                                <i data-lucide="sparkles"></i>
+                            </div>
+                            <div class="closure-card-content">
+                                <h3>Plain-English Explainable AI (XAI)</h3>
+                                <p>Integrated local Llama 3 engine translates cryptic network logs into actionable incident reports, eliminating alert fatigue and empowering any IT administrator to act quickly.</p>
+                            </div>
+                        </div>
+
+                        <div class="closure-card success-border">
+                            <div class="closure-card-icon success">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="closure-card-content">
+                                <h3>Built for SMBs & Education</h3>
+                                <p>Lightweight, affordable, and privacy-preserving. Solves the $150k/yr security analyst overhead problem with a plug-and-play architecture deployment in under 15 minutes.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card-box">
-                        <h3 class="card-heading"><i data-lucide="pie-chart"></i> Use of Funds & Strategic Outcomes</h3>
-                        
-                        <div class="use-list">
-                            <div class="use-item">
-                                <div class="use-dot primary"></div>
-                                <div>
-                                    <h4 class="use-title">50% — R&D, AI & Product Engineering</h4>
-                                    <p class="use-text">Expand core engineering team; optimize local LLM inference speed; build multi-tenant MSP console & automated firewall block APIs.</p>
-                                </div>
+                    <!-- Right: Call to Action & Team Contact Box -->
+                    <div class="closure-right-col">
+                        <div class="cta-card">
+                            <div class="cta-badge">
+                                <i data-lucide="rocket"></i> NEXT STEPS
                             </div>
-                            <div class="use-item">
-                                <div class="use-dot success"></div>
-                                <div>
-                                    <h4 class="use-title">30% — Go-To-Market & MSP Sales</h4>
-                                    <p class="use-text">Hire 2 MSP partner managers; attend major IT/security expos; launch developer community marketing & GitHub sponsorships.</p>
-                                </div>
-                            </div>
-                            <div class="use-item">
-                                <div class="use-dot warning"></div>
-                                <div>
-                                    <h4 class="use-title">20% — Security Compliance & Operations</h4>
-                                    <p class="use-text">Achieve SOC 2 Type II certification, conduct third-party security audits, and cover legal & administrative operations.</p>
-                                </div>
-                            </div>
-                        </div>
+                            <h3 class="cta-title">Join Us in Securing the Underserved Digital Ecosystem</h3>
+                            <p class="cta-desc">
+                                Cyberattacks on SMBs are rising exponentially. KairosAI bridges the critical gap between complex enterprise security tools and everyday IT teams.
+                            </p>
 
-                        <div class="vision-quote mt-3">
-                            <i data-lucide="quote" class="quote-icon"></i>
-                            <p><strong>Long-Term Vision:</strong> Become the standard AI Security Analyst for over 1,000,000 underserved SMBs and educational institutions worldwide.</p>
+                            <div class="cta-highlights">
+                                <div class="cta-pill"><i data-lucide="check-circle-2" class="icon-success"></i> Pilot Deployment Ready</div>
+                                <div class="cta-pill"><i data-lucide="check-circle-2" class="icon-success"></i> 5 Modular Demo Apps</div>
+                                <div class="cta-pill"><i data-lucide="check-circle-2" class="icon-success"></i> Open for Strategic Partnerships</div>
+                            </div>
+
+                            <div class="team-contact-box">
+                                <h4 class="contact-box-title"><i data-lucide="users"></i> Project Lead Engineers</h4>
+                                <div class="team-names-grid">
+                                    <span><strong>Meet Shah</strong> • Backend Lead</span>
+                                    <span><strong>Pranav Mishra</strong> • Frontend Lead</span>
+                                    <span><strong>Jainam Dave</strong> • AI/ML Specialist</span>
+                                    <span><strong>Bhaavya Mehta</strong> • QA & Security</span>
+                                </div>
+                                <div class="contact-footer-line">
+                                    <span><i data-lucide="mail"></i> contact@kairosai.io</span>
+                                    <span><i data-lucide="globe"></i> kairosai.io</span>
+                                    <span><i data-lucide="github"></i> github.com/kairosai</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

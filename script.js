@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideData = [
         {
             title: "Title & Cover Vision",
-            notes: `<strong>Elevator Pitch (60s):</strong> "KairosAI is an intelligent network threat detection and analysis tool tailored for small organizations and educational institutions. By combining traditional packet monitoring with machine learning and large language models, it detects anomalies in real time and explains them in plain English."<br><br><strong>Key Talking Points:</strong><br>• Introduce team roles: XYZ (Backend Lead), ABC (Frontend/UI), DEF (AI/ML Specialist), GHI (QA & Docs).<br>• Emphasize the core value: Democratizing enterprise security for underserved SMBs.`
+            notes: `<strong>Elevator Pitch (60s):</strong> "KairosAI is an intelligent network threat detection and analysis tool tailored for small organizations and educational institutions. By combining traditional packet monitoring with machine learning and large language models, it detects anomalies in real time and explains them in plain English."<br><br><strong>Key Talking Points:</strong><br>• Introduce team roles: Meet Shah (Backend Lead), Pranav Mishra (Frontend Lead), Jainam Dave (AI/ML Specialist), Bhaavya Mehta (QA & Security).<br>• Emphasize the core value: Democratizing enterprise security for underserved SMBs.`
         },
         {
             title: "Urgent SMB Crisis",
@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             notes: `<strong>Key Talking Points:</strong><br>• Walk step-by-step through packet capture to dashboard.<br>• Fast metadata extraction avoids PII privacy risks.<br>• Async FastAPI backend ensures real-time low-latency flow scoring.`
         },
         {
+            title: "Investor Demo Applications",
+            notes: `<strong>Key Talking Points:</strong><br>• Walk investors through the 5 target applications being developed for live demonstration.<br>• <strong>1. Customer App:</strong> Real e-commerce target illustrating how KairosAI monitors production web traffic without compromising PII.<br>• <strong>2. Security Dashboard:</strong> Core SOC product showing live packet sniffer feeds, anomaly scoring, and Llama 3 XAI natural language alerts.<br>• <strong>3. Attack Simulator:</strong> Adversary test bench to trigger on-demand SYN floods, port scans, and SQLi for instant validation.<br>• <strong>4. Developer Portal:</strong> Webhook triggers, API key administration, and REST integration docs.<br>• <strong>5. Mobile App:</strong> Pocket SOC companion for push notifications and emergency host isolation.`
+        },
+        {
             title: "Product Capabilities",
             notes: `<strong>Key Talking Points:</strong><br>• Demo the Live Threat Monitor UI snippet.<br>• Highlight <1ms ML inference latency.<br>• Explainability prevents alarm fatigue: non-experts understand *why* an alert fired and *what* action to take.`
         },
@@ -47,16 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
             notes: `<strong>Key Talking Points:</strong><br>• Compare KairosAI with Zeek/Snort, Splunk/CrowdStrike, and Darktrace.<br>• Key differentiators: Built-in natural language XAI, <15 minute plug-and-play setup, <$3,600/yr TCO.`
         },
         {
-            title: "Business Model",
-            notes: `<strong>Key Talking Points:</strong><br>• Community Sensor ($0) drives open-source bottom-up virality.<br>• Pro SMB ($299/mo/site) drives predictable recurring SaaS revenue.<br>• MSP Partner Portal ($999/mo) unlocks high-margin multi-tenant scale.`
+            title: "Team Execution & Ownership",
+            notes: `<strong>Key Talking Points:</strong><br>• <strong>Meet Shah (Backend Lead):</strong> Scapy sniffer (4k+ pkts/sec), FastAPI server, SQLite persistence, REST & Webhook APIs.<br>• <strong>Pranav Mishra (Frontend Lead):</strong> React SOC dashboard, React Flow topology, Tailwind CSS tokens & 5 Investor Demo Apps.<br>• <strong>Jainam Dave (AI/ML Specialist):</strong> Dual ML models (Random Forest + Isolation Forest), local Llama 3 XAI prompt design & CIC-IDS tuning.<br>• <strong>Bhaavya Mehta (QA & Security Lead):</strong> Adversary Attack Simulator (DDoS/SQLi/Port scan), GDPR privacy testing, PDF report generation.`
         },
         {
-            title: "Team & Roadmap",
-            notes: `<strong>Key Talking Points:</strong><br>• Highlight team balance across Systems, UI/UX, AI/ML, and Security QA.<br>• Walk through 12-month roadmap: Q1 MVP → Q2 SMB Beta → Q3 MSP Launch → Q4 Zero-Trust & Edge AI.`
-        },
-        {
-            title: "Financial Ask & Vision",
-            notes: `<strong>Key Talking Points:</strong><br>• Asking for $750,000 Seed Funding (18-Month Runway).<br>• 50% Engineering/AI, 30% GTM & MSP Sales, 20% Security Compliance & Operations.<br>• Ultimate Vision: Standard AI Security Analyst for 1M+ SMBs worldwide.`
+            title: "Conclusion & Final Vision",
+            notes: `<strong>Key Talking Points:</strong><br>• Summarize KairosAI's mission: Bringing enterprise-grade autonomous threat detection & XAI to every SMB.<br>• Highlight the 3 core pillars: Real-time ML anomaly detection (<1ms), Plain-English Llama 3 XAI explanations, and zero-friction plug-and-play setup.<br>• Conclude with team readiness and next steps for deployment & partnership opportunities.`
         }
     ];
 
@@ -82,9 +82,67 @@ document.addEventListener('DOMContentLoaded', () => {
     scalePresentation();
 
     /* ----------------------------------------------------------------------
-       2. Slide Navigation Logic
+       2. Slide 6 Demo Application Showcase Switcher & Tab Cycling
+       ---------------------------------------------------------------------- */
+    const appCards = document.querySelectorAll('.app-item-card');
+    const demoPanels = document.querySelectorAll('.demo-panel');
+    const demoUrlText = document.getElementById('demo-url-text');
+    let activeAppIndex = 0;
+
+    const demoUrls = {
+        'customer-app': 'https://demo.kairosstore.io/checkout',
+        'security-dashboard': 'https://soc.kairosai.io/dashboard',
+        'attack-simulator': 'https://sim.kairosai.io/adversary-console',
+        'developer-portal': 'https://developer.kairosai.io/docs/v1',
+        'mobile-app': 'https://app.kairosai.io/mobile-preview'
+    };
+
+    function selectAppTab(index) {
+        if (!appCards.length) return;
+        if (index < 0) index = 0;
+        if (index >= appCards.length) index = appCards.length - 1;
+
+        activeAppIndex = index;
+        const card = appCards[activeAppIndex];
+        if (!card) return;
+
+        const target = card.getAttribute('data-app-target');
+
+        // Remove active from all cards
+        appCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+
+        // Show target panel
+        demoPanels.forEach(panel => {
+            if (panel.id === `panel-${target}`) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
+            }
+        });
+
+        // Update URL bar text
+        if (demoUrlText && demoUrls[target]) {
+            demoUrlText.textContent = demoUrls[target];
+        }
+
+        // Refresh icons if lucide exists
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    appCards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+            selectAppTab(idx);
+        });
+    });
+
+    /* ----------------------------------------------------------------------
+       3. Slide Navigation Logic
        ---------------------------------------------------------------------- */
     function goToSlide(n) {
+        const prevSlideNum = currentSlide;
         if (n < 1) n = 1;
         if (n > totalSlides) n = totalSlides;
 
@@ -100,6 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         currentSlide = n;
+
+        // If entering Slide 6 from previous slide (Slide 5), select first tab
+        // If entering Slide 6 from next slide (Slide 7), select last tab
+        if (currentSlide === 6) {
+            if (prevSlideNum < 6) {
+                selectAppTab(0);
+            } else if (prevSlideNum > 6) {
+                selectAppTab(appCards.length - 1);
+            }
+        }
 
         // Update UI counters
         if (currentSlideNumEl) currentSlideNumEl.textContent = currentSlide;
@@ -124,19 +192,36 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentSlide === 2 && !window.chartProblemInitialized) {
             initChartProblem();
         }
-        if (currentSlide === 10 && !window.chartAskInitialized) {
-            initChartAsk();
+    }
+
+    function navigateNext() {
+        if (currentSlide === 6) {
+            if (activeAppIndex < appCards.length - 1) {
+                selectAppTab(activeAppIndex + 1);
+                return;
+            }
         }
+        goToSlide(currentSlide + 1);
+    }
+
+    function navigatePrev() {
+        if (currentSlide === 6) {
+            if (activeAppIndex > 0) {
+                selectAppTab(activeAppIndex - 1);
+                return;
+            }
+        }
+        goToSlide(currentSlide - 1);
     }
 
     // Controls Event Listeners
-    document.getElementById('btn-prev')?.addEventListener('click', () => goToSlide(currentSlide - 1));
-    document.getElementById('btn-next')?.addEventListener('click', () => goToSlide(currentSlide + 1));
+    document.getElementById('btn-prev')?.addEventListener('click', navigatePrev);
+    document.getElementById('btn-next')?.addEventListener('click', navigateNext);
     document.getElementById('btn-first')?.addEventListener('click', () => goToSlide(1));
     document.getElementById('btn-last')?.addEventListener('click', () => goToSlide(totalSlides));
 
     /* ----------------------------------------------------------------------
-       3. Keyboard Controls
+       4. Keyboard Controls
        ---------------------------------------------------------------------- */
     document.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -147,13 +232,13 @@ document.addEventListener('DOMContentLoaded', () => {
             case ' ':
             case 'PageDown':
                 e.preventDefault();
-                goToSlide(currentSlide + 1);
+                navigateNext();
                 break;
             case 'ArrowLeft':
             case 'ArrowUp':
             case 'PageUp':
                 e.preventDefault();
-                goToSlide(currentSlide - 1);
+                navigatePrev();
                 break;
             case 'Home':
                 e.preventDefault();
@@ -183,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ----------------------------------------------------------------------
-       4. Speaker Notes & Overview Modals
+       5. Speaker Notes & Overview Modals
        ---------------------------------------------------------------------- */
     function toggleSpeakerNotes() {
         if (speakerNotesModal) {
@@ -217,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ----------------------------------------------------------------------
-       5. Render Thumbnail Strip & Overview Grid
+       6. Render Thumbnail Strip & Overview Grid
        ---------------------------------------------------------------------- */
     function renderThumbnailsAndOverview() {
         if (thumbnailStripEl) {
@@ -253,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderThumbnailsAndOverview();
 
     /* ----------------------------------------------------------------------
-       6. Chart.js Data Visualizations
+       7. Chart.js Data Visualizations
        ---------------------------------------------------------------------- */
     function initChartProblem() {
         const ctx = document.getElementById('chart-problem')?.getContext('2d');
@@ -289,41 +374,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         max: 100,
                         ticks: {
                             callback: value => value + '%'
-                        }
-                    }
-                }
-            }
-        });
-    }
-
-    function initChartAsk() {
-        const ctx = document.getElementById('chart-ask')?.getContext('2d');
-        if (!ctx) return;
-
-        window.chartAskInitialized = true;
-
-        new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['R&D & AI Engineering (50%)', 'GTM & MSP Sales (30%)', 'Security & Compliance (20%)'],
-                datasets: [{
-                    data: [375000, 225000, 150000],
-                    backgroundColor: [
-                        '#0284c7',
-                        '#059669',
-                        '#d97706'
-                    ],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            font: { family: 'Inter', size: 13 }
                         }
                     }
                 }
