@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KairosAI — Round 2 Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div>
+          <div class="brand-name">Kairos<span>AI</span></div>
+          <div class="brand-sub">Round 2 Security Prototype</div>
+        </div>
+      </div>
+      <div class="top-status">
+        <span class="live-dot"></span>
+        <span>MONITORING</span>
+        <span class="divider"></span>
+        <span id="clock"></span>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">REAL-TIME NETWORK THREAT DETECTION</div>
+          <h1>Detect. Explain. Analyze.</h1>
+          <p>KairosAI focuses on two network threats and can analyze controlled network logs through the same detection pipeline.</p>
+        </div>
+        <div class="scope-pill">
+          <strong>FOCUSED SCOPE</strong>
+          <span>Port Scan · Network Spoofing</span>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">NETWORK STATUS</div>
+          <div class="stat-value good" id="networkStatus">NORMAL</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">TRAFFIC / LOG EVENTS</div>
+          <div class="stat-value" id="trafficStat">1,240</div>
+          <div class="stat-note" id="trafficNote">packets / sec</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">ACTIVE THREATS</div>
+          <div class="stat-value" id="threatCount">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">INPUT MODE</div>
+          <div class="stat-value accent" id="modeStat">SIMULATION</div>
+        </div>
+      </section>
+
+      <section class="grid-main">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Threat Scenarios</div>
+              <div class="panel-sub">Controlled scenarios for reproducible demonstration</div>
+            </div>
+            <button class="reset-btn" id="resetBtn">Reset</button>
+          </div>
+
+          <div class="attack-list">
+            <button class="attack-btn" data-attack="portscan">
+              <div class="attack-icon blue">⌁</div>
+              <div class="attack-copy">
+                <div class="attack-name">Port Scan</div>
+                <div class="attack-desc">Reconnaissance across multiple destination ports</div>
+              </div>
+              <div class="attack-method">ML + RULE</div>
+            </button>
+
+            <button class="attack-btn" data-attack="spoofing">
+              <div class="attack-icon green">⇄</div>
+              <div class="attack-copy">
+                <div class="attack-name">Network Spoofing</div>
+                <div class="attack-desc">Suspicious identity or IP–MAC mapping behavior</div>
+              </div>
+              <div class="attack-method">STATE RULE</div>
+            </button>
+          </div>
+
+          <div class="upload-box">
+            <div class="upload-title">Analyze Custom Network Logs</div>
+            <div class="upload-sub">
+              Upload a representative <strong>.log</strong> or <strong>.txt</strong> file. KairosAI parses the log,
+              extracts relevant indicators, and sends the structured event through the same detection pipeline.
+            </div>
+            <label class="file-btn">
+              <input type="file" id="logFile" accept=".log,.txt,.csv">
+              Choose Log File
+            </label>
+            <div class="file-name" id="fileName">No file selected</div>
+            <div class="upload-status" id="uploadStatus"></div>
+          </div>
+
+          <div class="demo-note">
+            <span class="info-icon">i</span>
+            <div>
+              <strong>Controlled Demonstration</strong>
+              <span>Simulation and uploaded logs are used to validate the detection and explanation flow without sending disruptive traffic.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel detector-panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Detector Console</div>
+              <div class="panel-sub" id="consolePath">kairosai://detector/idle</div>
+            </div>
+            <div class="console-chip" id="severityChip">IDLE</div>
+          </div>
+
+          <div class="alert-card idle" id="alertCard">
+            <div class="alert-top">
+              <span class="alert-kicker" id="alertKicker">SYSTEM READY</span>
+              <span id="alertTime"></span>
+            </div>
+            <div class="alert-title" id="alertTitle">No active threat</div>
+            <div class="alert-source" id="alertSource">Run a scenario or upload a network log to begin.</div>
+          </div>
+
+          <div class="evidence-box">
+            <div class="box-title">Feature / Log Telemetry</div>
+            <div class="telemetry-grid" id="telemetry">
+              <div class="telemetry-item"><span>Source</span><strong>—</strong></div>
+              <div class="telemetry-item"><span>Target</span><strong>—</strong></div>
+              <div class="telemetry-item"><span>Observed Signal</span><strong>—</strong></div>
+              <div class="telemetry-item"><span>Input</span><strong>—</strong></div>
+            </div>
+          </div>
+
+          <div class="xai-box">
+            <div class="xai-header">
+              <span class="sparkle">✦</span>
+              <span>Explainable Security Insight</span>
+              <span class="local-tag">LOCAL / FALLBACK</span>
+            </div>
+            <div class="xai-text" id="xaiText">
+              The explanation layer will translate structured detection evidence into plain English after a threat is classified.
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button class="action-primary" id="actionBtn" disabled>Recommended Action</button>
+            <span class="action-disclaimer">Prototype recommendation — administrator approval required.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="history panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Incident / Analysis History</div>
+            <div class="panel-sub">Current browser session</div>
+          </div>
+          <div class="history-count" id="historyCount">0 events</div>
+        </div>
+        <div id="historyList" class="history-list">
+          <div class="empty-history">No events yet. Run a scenario or upload a log.</div>
+        </div>
+      </section>
+
+      <footer>
+        <span>KairosAI • Technical Prototype</span>
+        <span>Detection input: controlled simulations + custom log ingestion</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

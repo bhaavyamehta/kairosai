@@ -1,0 +1,5 @@
+# KairosAI representative Network Spoofing log
+[10:44:02] ARP reply observed: 192.168.1.1 -> AA:BB:CC:11
+[10:44:03] ARP reply observed: 192.168.1.1 -> DD:EE:FF:22
+[10:44:03] Gateway IP 192.168.1.1 mapped to multiple MAC addresses
+[10:44:04] IP-MAC mapping conflict detected for local gateway

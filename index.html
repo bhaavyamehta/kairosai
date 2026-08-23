@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Chart.js for charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Lucide Icons -->
@@ -15,6 +18,7 @@
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Top Floating Toolbar -->
@@ -31,10 +35,14 @@
             </div>
         </div>
         <div class="nav-controls">
-            <button class="nav-btn" id="btn-notes" title="Toggle Speaker Notes (Key N)"><i data-lucide="file-text"></i> Speaker Notes</button>
-            <button class="nav-btn" id="btn-overview" title="Slide Overview (Key M)"><i data-lucide="grid"></i> Slides</button>
-            <button class="nav-btn" id="btn-print" title="Export PDF / Print (Key P)"><i data-lucide="printer"></i> PDF / Print</button>
-            <button class="nav-btn" id="btn-fullscreen" title="Toggle Fullscreen (Key F)"><i data-lucide="maximize"></i> Fullscreen</button>
+            <button class="nav-btn" id="btn-notes" title="Toggle Speaker Notes (Key N)"><i data-lucide="file-text"></i>
+                Speaker Notes</button>
+            <button class="nav-btn" id="btn-overview" title="Slide Overview (Key M)"><i data-lucide="grid"></i>
+                Slides</button>
+            <button class="nav-btn" id="btn-print" title="Export PDF / Print (Key P)"><i data-lucide="printer"></i> PDF
+                / Print</button>
+            <button class="nav-btn" id="btn-fullscreen" title="Toggle Fullscreen (Key F)"><i data-lucide="maximize"></i>
+                Fullscreen</button>
         </div>
     </nav>
 
@@ -45,8 +53,8 @@
             <!-- SLIDE 1: Title & Cover -->
             <section class="slide active" id="slide-1" data-slide-index="1">
                 <div class="slide-header-badge">
-                    <span class="pill-badge primary"><i data-lucide="zap"></i> Next-Gen Cybersecurity</span>
-                    <span class="pill-badge muted">Seed Pitch Deck</span>
+                    <span class="pill-badge primary"><i data-lucide="shield"></i> Technical Prototype</span>
+                    <span class="pill-badge muted">Round 2 Submission</span>
                 </div>
                 <div class="slide-hero-grid">
                     <div class="hero-left">
@@ -54,11 +62,11 @@
                             <i data-lucide="shield-alert" class="hero-logo-icon"></i>
                         </div>
                         <h1 class="hero-title">Kairos<span class="text-accent">AI</span></h1>
-                        <p class="hero-subtitle">Democratizing Real-Time Threat Detection & Plain-English Explainable AI for SMBs</p>
+                        <p class="hero-subtitle">Real-Time Network Threat Detection & Explainable Security</p>
                         <p class="hero-description">
-                            Traditional Intrusion Detection Systems overwhelm non-experts with raw alert dumps. KairosAI combines lightweight ML packet analysis with LLM explanations to turn complex network logs into clear, actionable security intelligence.
+                            Detects suspicious network activity and converts complex security events into clear, actionable intelligence.
                         </p>
-                        
+
                         <div class="hero-highlights">
                             <div class="highlight-item">
                                 <i data-lucide="check-circle-2" class="icon-success"></i>
@@ -66,7 +74,7 @@
                             </div>
                             <div class="highlight-item">
                                 <i data-lucide="check-circle-2" class="icon-success"></i>
-                                <span>ML Anomaly Detection (RF + IF)</span>
+                                <span>Feature & Rule Detection</span>
                             </div>
                             <div class="highlight-item">
                                 <i data-lucide="check-circle-2" class="icon-success"></i>
@@ -81,30 +89,30 @@
                     <div class="hero-right">
                         <div class="stat-cards-column">
                             <div class="stat-card">
-                                <div class="stat-icon-wrapper danger">
-                                    <i data-lucide="trending-up"></i>
-                                </div>
-                                <div class="stat-content">
-                                    <h3 class="stat-number">43%</h3>
-                                    <p class="stat-label">Of Cyberattacks Target SMBs</p>
-                                </div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon-wrapper warning">
-                                    <i data-lucide="alert-triangle"></i>
-                                </div>
-                                <div class="stat-content">
-                                    <h3 class="stat-number">$10.5T</h3>
-                                    <p class="stat-label">Global Cybercrime Costs by 2025</p>
-                                </div>
-                            </div>
-                            <div class="stat-card">
                                 <div class="stat-icon-wrapper primary">
-                                    <i data-lucide="clock"></i>
+                                    <i data-lucide="target"></i>
                                 </div>
                                 <div class="stat-content">
-                                    <h3 class="stat-number">48 Min</h3>
-                                    <p class="stat-label">Average Intruder Breakout Time</p>
+                                    <h3 class="stat-number">3</h3>
+                                    <p class="stat-label">Focused Attacks (Port Scan, SYN Flood, ARP Spoof)</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrapper accent">
+                                    <i data-lucide="git-branch"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-number">3-Stage</h3>
+                                    <p class="stat-label">Core Pipeline (Detect &rarr; Explain &rarr; Visualize)</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrapper success">
+                                    <i data-lucide="brain"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-number">Local AI</h3>
+                                    <p class="stat-label">Llama 3 / Ollama Explanation Layer</p>
                                 </div>
                             </div>
                         </div>
@@ -117,544 +125,518 @@
                 <div class="slide-header">
                     <span class="slide-num-tag">02</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">The Urgent SMB Security Crisis</h2>
-                        <p class="slide-subtitle">Surging Cyberattacks, Unaffordable Enterprise Tools & Overwhelming Alert Fatigue</p>
+                        <h2 class="slide-title">The Local Network Security Challenge</h2>
+                        <p class="slide-subtitle">Vulnerabilities in Educational and Small Organization Networks</p>
                     </div>
                 </div>
 
                 <div class="grid-2-col">
                     <div class="card-box">
-                        <h3 class="card-heading text-danger"><i data-lucide="shield-x"></i> Core Pain Points for SMBs & Education</h3>
+                        <h3 class="card-heading text-danger"><i data-lucide="shield-x"></i> Core Pain Points for Campus & Local Networks</h3>
                         <div class="problem-list">
                             <div class="problem-item">
                                 <div class="problem-bullet">1</div>
                                 <div>
-                                    <h4 class="problem-title">Alert Floods Without Human Context</h4>
-                                    <p class="problem-text">Legacy IDS (Snort, Zeek) spit out thousands of raw, cryptic TCP/IP hex logs daily that require a $150k/year security analyst to diagnose.</p>
+                                    <h4 class="problem-title">Alert Overload Without Context</h4>
+                                    <p class="problem-text">Legacy IDS solutions spit out thousands of raw, cryptic network log entries daily that are difficult for IT staff to filter and parse.</p>
                                 </div>
                             </div>
                             <div class="problem-item">
                                 <div class="problem-bullet">2</div>
                                 <div>
-                                    <h4 class="problem-title">79% Intrusions Are Now Malware-Free</h4>
-                                    <p class="problem-text">Modern attackers use stolen credentials and living-off-the-land techniques that bypass traditional static signature-based firewalls.</p>
+                                    <h4 class="problem-title">Difficulty Interpreting Network Activity</h4>
+                                    <p class="problem-text">Analyzing raw TCP/IP packet captures or hex streams requires deep forensic training, making it hard to quickly pinpoint root causes.</p>
                                 </div>
                             </div>
                             <div class="problem-item">
                                 <div class="problem-bullet">3</div>
                                 <div>
-                                    <h4 class="problem-title">AI-Augmented Phishing Speed</h4>
-                                    <p class="problem-text">Generative AI phishing messages achieve a 54% click rate vs 12% for human phishing, accelerating initial intrusion vectors dramatically.</p>
+                                    <h4 class="problem-title">Limited Cybersecurity Expertise</h4>
+                                    <p class="problem-text">Small school and organization IT departments generally have limited security staff, making continuous manual threat monitoring unfeasible.</p>
                                 </div>
                             </div>
                             <div class="problem-item">
                                 <div class="problem-bullet">4</div>
                                 <div>
-                                    <h4 class="problem-title">Prohibitive Cost of Enterprise SIEMs</h4>
-                                    <p class="problem-text">CrowdStrike, Darktrace, and Splunk require six-figure budgets and complex deployment teams impossible for SMBs.</p>
+                                    <h4 class="problem-title">Slow Identification of Suspicious Behavior</h4>
+                                    <p class="problem-text">Without real-time behavioral telemetry, scanning or spoofing attacks can go undetected for weeks, risking data integrity.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="card-box flex-center">
-                        <h3 class="card-heading"><i data-lucide="bar-chart-2"></i> SMB Cyber Attack Landscape Trends</h3>
+                        <h3 class="card-heading"><i data-lucide="bar-chart-2"></i> Campus Network Threat Frequency (Probes)</h3>
                         <div class="chart-container-box">
                             <canvas id="chart-problem"></canvas>
                         </div>
-                        <div class="chart-caption">
-                            <i data-lucide="info"></i> 80% of ransomware assaults now explicitly target organizations under 1,000 employees.
+                        <div class="chart-caption" style="margin-top: 14px;">
+                            <i data-lucide="info"></i> Campus subnets encounter high rates of automated scans and MAC/IP manipulation attempts due to diverse and shared network endpoints.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-banner" style="margin-top: 24px;">
+                    <div class="banner-content">
+                        <i data-lucide="graduation-cap" class="banner-icon text-primary"></i>
+                        <div>
+                            <strong>Campus Network Context:</strong> Campus networks contain student systems, labs, administrative systems and shared devices, making fast identification of abnormal activity important.
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- SLIDE 3: The Solution -->
+            <!-- SLIDE 3: Round 1 Feedback &rarr; Round 2 Focus -->
             <section class="slide" id="slide-3" data-slide-index="3">
                 <div class="slide-header">
                     <span class="slide-num-tag">03</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">The Solution: KairosAI</h2>
-                        <p class="slide-subtitle">Democratizing Intrusion Detection Through Machine Learning & Explainable AI</p>
+                        <h2 class="slide-title">Round 1 Feedback &rarr; Round 2 Focus</h2>
+                        <p class="slide-subtitle">Narrowing Threat Scope for Reliable and Verifiable Detection</p>
                     </div>
                 </div>
 
-                <div class="solution-grid">
-                    <div class="solution-card">
-                        <div class="solution-icon-box primary">
-                            <i data-lucide="radio"></i>
+                <div class="grid-2-col">
+                    <div class="card-box">
+                        <h3 class="card-heading text-muted"><i data-lucide="shield-alert"></i> Round 1 Scope</h3>
+                        <p class="card-sub-label" style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Broad Network Threat Detection</p>
+                        <div class="problem-list" style="margin-top: 20px;">
+                            <div class="problem-item">
+                                <div class="problem-bullet" style="background: var(--border-light); color: var(--text-muted);">1</div>
+                                <div>
+                                    <h4 class="problem-title text-muted">Ambitious Multi-Vector Coverage</h4>
+                                    <p class="problem-text">Attempted to capture all classes of malware, intrusions, and anomalous exploits simultaneously.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet" style="background: var(--border-light); color: var(--text-muted);">2</div>
+                                <div>
+                                    <h4 class="problem-title text-muted">Unfocused Feature Engineering</h4>
+                                    <p class="problem-text">Broad features led to higher false positives and limited model specificity on individual attack patterns.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet" style="background: var(--border-light); color: var(--text-muted);">3</div>
+                                <div>
+                                    <h4 class="problem-title text-muted">Complex Live Verification</h4>
+                                    <p class="problem-text">Difficult to simulate and prove end-to-end detection rates across generic network traffic streams.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="solution-card-title">Real-Time Packet Sniffing</h3>
-                        <p class="solution-card-desc">
-                            Continuous capture of network traffic via Scapy/PyShark. Extracts 5-tuple metadata, packet sizes, flow rates, and payload entropy without violating user privacy.
-                        </p>
-                        <span class="tech-tag">Scapy • PyShark • Async FastAPI</span>
                     </div>
 
-                    <div class="solution-card">
-                        <div class="solution-icon-box accent">
-                            <i data-lucide="cpu"></i>
+                    <div class="card-box" style="border: 2px solid var(--primary); background: rgba(2, 132, 199, 0.02);">
+                        <h3 class="card-heading text-primary"><i data-lucide="target"></i> Round 2 Refinement</h3>
+                        <p class="card-sub-label" style="font-size: 13px; color: var(--primary); margin-top: 4px;">Focused Detection of 3 Attacks</p>
+                        <div class="problem-list" style="margin-top: 20px;">
+                            <div class="problem-item">
+                                <div class="problem-bullet" style="background: var(--primary-light); color: var(--primary);">1</div>
+                                <div>
+                                    <h4 class="problem-title text-primary">Port Scanning</h4>
+                                    <p class="problem-text">Detect reconnaissance scan patterns across multiple ports using specialized network features.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet" style="background: var(--primary-light); color: var(--primary);">2</div>
+                                <div>
+                                    <h4 class="problem-title text-primary">SYN Flood DDoS</h4>
+                                    <p class="problem-text">Capture volumetric TCP SYN connection rates and analyze incomplete handshake behaviors.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item">
+                                <div class="problem-bullet" style="background: var(--primary-light); color: var(--primary);">3</div>
+                                <div>
+                                    <h4 class="problem-title text-primary">ARP Spoofing</h4>
+                                    <p class="problem-text">Inspect conflicts and changes in local IP-MAC address mappings in real time.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="solution-card-title">Dual ML Detection Engine</h3>
-                        <p class="solution-card-desc">
-                            Supervised <strong>Random Forest</strong> flags known attack vectors with 99%+ accuracy, while unsupervised <strong>Isolation Forest</strong> catches novel zero-day network anomalies.
-                        </p>
-                        <span class="tech-tag">Scikit-Learn • RF • Isolation Forest</span>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-icon-box success">
-                            <i data-lucide="sparkles"></i>
-                        </div>
-                        <h3 class="solution-card-title">Explainable AI (XAI) Layer</h3>
-                        <p class="solution-card-desc">
-                            Queries local LLM (Llama 3 via Ollama/OpenAI) to translate anomalous feature vectors into clear, plain-English incident summaries and recommended response steps.
-                        </p>
-                        <span class="tech-tag">Llama 3 • Ollama • XAI Prompts</span>
-                    </div>
-
-                    <div class="solution-card">
-                        <div class="solution-icon-box warning">
-                            <i data-lucide="layout-dashboard"></i>
-                        </div>
-                        <h3 class="solution-card-title">Intuitive React Dashboard</h3>
-                        <p class="solution-card-desc">
-                            Real-time streaming UI featuring network flow diagrams (React Flow), traffic trend charts (Chart.js), and automated single-click incident PDF reports.
-                        </p>
-                        <span class="tech-tag">React • Tailwind • Chart.js</span>
                     </div>
                 </div>
 
-                <div class="solution-banner">
+                <div class="solution-banner" style="margin-top: 24px;">
                     <div class="banner-content">
-                        <i data-lucide="shield-check" class="banner-icon"></i>
+                        <i data-lucide="info" class="banner-icon text-accent"></i>
                         <div>
-                            <strong>Core Value Proposition:</strong> KairosAI turns complex cybersecurity data into plain language, allowing any IT generalist to manage network defense effectively at 1/10th the cost.
+                            <strong>Rationale for Narrowed Scope:</strong> Narrowing the scope allows attack-specific feature engineering, stronger testing, clearer validation, and a reliable live demonstration.
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 4: Market Opportunity -->
+            <!-- SLIDE 4: The 3 Target Attacks -->
             <section class="slide" id="slide-4" data-slide-index="4">
                 <div class="slide-header">
                     <span class="slide-num-tag">04</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Market Opportunity & Target Verticals</h2>
-                        <p class="slide-subtitle">A $50B+ Addressable Market Hungry for Accessible Network Security</p>
+                        <h2 class="slide-title">The Three Target Attacks</h2>
+                        <p class="slide-subtitle">Clear Visual Explanations of the Network Threat Behaviors Detected by KairosAI</p>
                     </div>
                 </div>
 
-                <div class="slide-4-container">
-                    <!-- Top Row: TAM / SAM / SOM Metrics -->
-                    <div class="grid-3-tam">
-                        <div class="tam-box">
-                            <div class="tam-header-row">
-                                <span class="tam-badge">TAM</span>
-                                <i data-lucide="globe" style="width: 20px; height: 20px; color: var(--text-light);"></i>
-                            </div>
-                            <h3 class="tam-value">$50.2 Billion</h3>
-                            <h4 class="tam-label">Global SMB Cybersecurity Market</h4>
-                            <p class="tam-desc">Total worldwide spending by small and mid-sized enterprises on cybersecurity software and services by 2026.</p>
+                <div class="grid-3-col">
+                    <!-- Port Scanning Card -->
+                    <div class="solution-card" style="align-items: center; text-align: center;">
+                        <div class="solution-icon-box primary">
+                            <i data-lucide="scan-eye"></i>
                         </div>
-
-                        <div class="tam-box highlight-tam">
-                            <div class="tam-header-row">
-                                <span class="tam-badge primary">SAM</span>
-                                <i data-lucide="target" style="width: 20px; height: 20px; color: var(--primary);"></i>
-                            </div>
-                            <h3 class="tam-value text-accent">$12.4 Billion</h3>
-                            <h4 class="tam-label">SMB Network Intrusion & SOC Market</h4>
-                            <p class="tam-desc">Addressable segment focused on network detection, threat intelligence, and log monitoring for companies under 1,000 employees.</p>
-                        </div>
-
-                        <div class="tam-box">
-                            <div class="tam-header-row">
-                                <span class="tam-badge">SOM</span>
-                                <i data-lucide="zap" style="width: 20px; height: 20px; color: var(--text-light);"></i>
-                            </div>
-                            <h3 class="tam-value">$450 Million</h3>
-                            <h4 class="tam-label">Initial Serviceable Market</h4>
-                            <p class="tam-desc">Higher-Ed Computer Labs, Regional Managed Service Providers (MSPs), and high-risk Fintech/Healthcare SMBs.</p>
+                        <h3 class="solution-card-title">Port Scanning</h3>
+                        <span class="pill-badge muted" style="margin-bottom: 12px;">Reconnaissance</span>
+                        <p class="solution-card-desc" style="font-size: 13px; line-height: 1.5; min-height: 80px;">
+                            Detect abnormal connection attempts across multiple ports. Attackers systematically probe target systems to identify active services and entry points.
+                        </p>
+                        
+                        <!-- Simple visual network flow mockup -->
+                        <div style="background: rgba(0,0,0,0.03); width: 100%; border-radius: 8px; padding: 12px; margin-top: auto; font-family: var(--font-mono); font-size: 11px; text-align: left; border: 1px dashed var(--border-light);">
+                            <div style="color: var(--text-muted);"><i data-lucide="laptop" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i> Attacker &rarr; Target</div>
+                            <div style="margin-left: 10px; color: var(--danger); margin-top: 4px;"><i data-lucide="arrow-right-left" style="width: 10px; height: 10px; vertical-align: middle;"></i> Port 21 (SYN) &rarr; Closed</div>
+                            <div style="margin-left: 10px; color: var(--danger); margin-top: 2px;"><i data-lucide="arrow-right-left" style="width: 10px; height: 10px; vertical-align: middle;"></i> Port 22 (SYN) &rarr; Closed</div>
+                            <div style="margin-left: 10px; color: var(--success); margin-top: 2px;"><i data-lucide="arrow-right-left" style="width: 10px; height: 10px; vertical-align: middle;"></i> Port 80 (SYN) &rarr; Open</div>
                         </div>
                     </div>
 
-                    <!-- Bottom Row: Target Verticals -->
-                    <div class="grid-3-verticals">
-                        <div class="vertical-card">
-                            <div class="vertical-icon-box">
-                                <i data-lucide="building-2"></i>
-                            </div>
-                            <div class="vertical-card-content">
-                                <h4>Small & Medium Enterprises</h4>
-                                <p>Companies with 10–500 employees lacking a dedicated SOC team, requiring zero-overhead plug-and-play protection.</p>
-                            </div>
+                    <!-- SYN Flood Card -->
+                    <div class="solution-card" style="align-items: center; text-align: center;">
+                        <div class="solution-icon-box accent">
+                            <i data-lucide="activity"></i>
                         </div>
-
-                        <div class="vertical-card">
-                            <div class="vertical-icon-box">
-                                <i data-lucide="graduation-cap"></i>
-                            </div>
-                            <div class="vertical-card-content">
-                                <h4>Educational Institutions</h4>
-                                <p>Universities, high schools, and computer science labs needing affordable NIDS with teaching-friendly XAI explanations.</p>
-                            </div>
+                        <h3 class="solution-card-title">SYN Flood</h3>
+                        <span class="pill-badge danger" style="margin-bottom: 12px;">Denial of Service</span>
+                        <p class="solution-card-desc" style="font-size: 13px; line-height: 1.5; min-height: 80px;">
+                            Detect abnormal TCP SYN rates and incomplete connection behavior. Overwhelms systems by sending connection requests and ignoring handshakes.
+                        </p>
+                        
+                        <!-- Simple visual network flow mockup -->
+                        <div style="background: rgba(0,0,0,0.03); width: 100%; border-radius: 8px; padding: 12px; margin-top: auto; font-family: var(--font-mono); font-size: 11px; text-align: left; border: 1px dashed var(--border-light);">
+                            <div style="color: var(--text-muted);"><i data-lucide="server" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i> Web Server Buffer</div>
+                            <div style="margin-left: 10px; color: var(--warning); margin-top: 4px;"><i data-lucide="refresh-cw" style="width: 10px; height: 10px; vertical-align: middle;"></i> SYN Recv (Half-Open)</div>
+                            <div style="margin-left: 10px; color: var(--warning); margin-top: 2px;"><i data-lucide="refresh-cw" style="width: 10px; height: 10px; vertical-align: middle;"></i> SYN Recv (Half-Open)</div>
+                            <div style="margin-left: 10px; color: var(--danger); margin-top: 2px;"><i data-lucide="alert-triangle" style="width: 10px; height: 10px; vertical-align: middle;"></i> Queue Full (No Access)</div>
                         </div>
+                    </div>
 
-                        <div class="vertical-card">
-                            <div class="vertical-icon-box">
-                                <i data-lucide="server"></i>
-                            </div>
-                            <div class="vertical-card-content">
-                                <h4>Managed Service Providers (MSPs)</h4>
-                                <p>MSPs looking for a multi-tenant, white-labeled threat detection engine to bundle for hundreds of client sites.</p>
-                            </div>
+                    <!-- ARP Spoofing Card -->
+                    <div class="solution-card" style="align-items: center; text-align: center;">
+                        <div class="solution-icon-box success">
+                            <i data-lucide="git-compare"></i>
+                        </div>
+                        <h3 class="solution-card-title">ARP Spoofing</h3>
+                        <span class="pill-badge warning" style="margin-bottom: 12px;">Network Manipulation</span>
+                        <p class="solution-card-desc" style="font-size: 13px; line-height: 1.5; min-height: 80px;">
+                            Detect suspicious changes or conflicts in IP–MAC mappings. Associating the attacker's MAC with a local gateway IP intercepts traffic.
+                        </p>
+                        
+                        <!-- Simple visual network flow mockup -->
+                        <div style="background: rgba(0,0,0,0.03); width: 100%; border-radius: 8px; padding: 12px; margin-top: auto; font-family: var(--font-mono); font-size: 11px; text-align: left; border: 1px dashed var(--border-light);">
+                            <div style="color: var(--text-muted);"><i data-lucide="shield-alert" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i> Subnet ARP Table</div>
+                            <div style="margin-left: 10px; color: var(--success); margin-top: 4px;"><i data-lucide="check" style="width: 10px; height: 10px; vertical-align: middle;"></i> 192.168.1.1 &rarr; MAC_A</div>
+                            <div style="margin-left: 10px; color: var(--danger); margin-top: 2px;"><i data-lucide="x" style="width: 10px; height: 10px; vertical-align: middle;"></i> 192.168.1.1 &rarr; MAC_B (Fake!)</div>
+                            <div style="margin-left: 10px; color: var(--warning); margin-top: 2px;"><i data-lucide="eye" style="width: 10px; height: 10px; vertical-align: middle;"></i> Traffic Intercepted</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 5: Technical Architecture -->
+            <!-- SLIDE 5: Detection Methodology -->
             <section class="slide" id="slide-5" data-slide-index="5">
                 <div class="slide-header">
                     <span class="slide-num-tag">05</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">System Architecture & Data Pipeline</h2>
-                        <p class="slide-subtitle">Modular 6-Stage Pipeline Built for Speed, Accuracy & Explainability</p>
+                        <h2 class="slide-title">Detection & Explanation Methodology</h2>
+                        <p class="slide-subtitle">A Rigorous Pipeline Separating Algorithmic Detection from LLM Explanation</p>
                     </div>
                 </div>
 
-                <div class="architecture-flow">
+                <div class="architecture-flow" style="margin: 20px 0;">
                     <div class="arch-step">
                         <div class="arch-step-num">1</div>
-                        <div class="arch-step-icon"><i data-lucide="activity"></i></div>
-                        <h4 class="arch-step-title">Packet Sniffing</h4>
-                        <p class="arch-step-text">Live network capture via Scapy & PyShark. Filters metadata.</p>
-                        <span class="arch-code">Scapy Engine</span>
+                        <div class="arch-step-icon" style="background: var(--primary-light); color: var(--primary);"><i data-lucide="radio"></i></div>
+                        <h4 class="arch-step-title" style="font-size: 14px;">1. Packet Capture</h4>
+                        <p class="arch-step-text" style="font-size: 11px; margin-top: 4px;">Scapy/PyShark continuously monitors local interfaces.</p>
                     </div>
 
-                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="arch-arrow"><i data-lucide="chevron-right"></i></div>
 
                     <div class="arch-step">
                         <div class="arch-step-num">2</div>
-                        <div class="arch-step-icon"><i data-lucide="database"></i></div>
-                        <h4 class="arch-step-title">Feature Extraction</h4>
-                        <p class="arch-step-text">Extracts 5-tuples, byte counts, flow rate, entropy to SQLite.</p>
-                        <span class="arch-code">FastAPI + SQLite</span>
+                        <div class="arch-step-icon" style="background: var(--primary-light); color: var(--primary);"><i data-lucide="database"></i></div>
+                        <h4 class="arch-step-title" style="font-size: 14px;">2. Feature Extract</h4>
+                        <p class="arch-step-text" style="font-size: 11px; margin-top: 4px;">Extracts IPs, Ports, Protocols, Rates, Flags, IP-MAC mappings.</p>
                     </div>
 
-                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="arch-arrow"><i data-lucide="chevron-right"></i></div>
 
-                    <div class="arch-step">
-                        <div class="arch-step-num">3</div>
-                        <div class="arch-step-icon"><i data-lucide="binary"></i></div>
-                        <h4 class="arch-step-title">ML Detection</h4>
-                        <p class="arch-step-text">Random Forest & Isolation Forest score flows for anomalies.</p>
-                        <span class="arch-code">Scikit-Learn</span>
+                    <div class="arch-step" style="border: 2px solid var(--accent); background: #ffffff;">
+                        <div class="arch-step-num" style="background: var(--accent); color: #ffffff;">3</div>
+                        <div class="arch-step-icon" style="background: var(--accent-light); color: var(--accent);"><i data-lucide="shield-check"></i></div>
+                        <h4 class="arch-step-title" style="font-size: 14px; color: var(--accent);">3. ML & Rules</h4>
+                        <p class="arch-step-text" style="font-size: 11px; margin-top: 4px;">Determines threat classification (e.g. Random Forest + IP-MAC check).</p>
                     </div>
 
-                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="arch-arrow"><i data-lucide="chevron-right"></i></div>
 
-                    <div class="arch-step highlight-step">
-                        <div class="arch-step-num">4</div>
-                        <div class="arch-step-icon"><i data-lucide="brain-circuit"></i></div>
-                        <h4 class="arch-step-title">XAI Explanation</h4>
-                        <p class="arch-step-text">Llama 3 generates plain-English reasoning & response advice.</p>
-                        <span class="arch-code">Llama 3 / Ollama</span>
+                    <div class="arch-step" style="border: 2px solid var(--success); background: #ffffff;">
+                        <div class="arch-step-num" style="background: var(--success); color: #ffffff;">4</div>
+                        <div class="arch-step-icon" style="background: var(--success-light); color: var(--success);"><i data-lucide="brain"></i></div>
+                        <h4 class="arch-step-title" style="font-size: 14px; color: var(--success);">4. LLM Explain</h4>
+                        <p class="arch-step-text" style="font-size: 11px; margin-top: 4px;">Llama 3/Ollama translates classified events into plain English.</p>
                     </div>
 
-                    <div class="arch-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="arch-arrow"><i data-lucide="chevron-right"></i></div>
 
                     <div class="arch-step">
                         <div class="arch-step-num">5</div>
-                        <div class="arch-step-icon"><i data-lucide="monitor"></i></div>
-                        <h4 class="arch-step-title">Dashboard & Reports</h4>
-                        <p class="arch-step-text">React UI displays live flows, charts, and auto PDF reports.</p>
-                        <span class="arch-code">React + Chart.js</span>
+                        <div class="arch-step-icon" style="background: var(--primary-light); color: var(--primary);"><i data-lucide="monitor"></i></div>
+                        <h4 class="arch-step-title" style="font-size: 14px;">5. Dashboard UI</h4>
+                        <p class="arch-step-text" style="font-size: 11px; margin-top: 4px;">Renders live telemetry, alert status, and explanations.</p>
                     </div>
                 </div>
 
-                <div class="tech-stack-row">
-                    <div class="tech-item"><i data-lucide="code"></i> <strong>Backend:</strong> Python 3.11, FastAPI, Scapy, PyShark, SQLite</div>
-                    <div class="tech-item"><i data-lucide="cpu"></i> <strong>ML & AI:</strong> Random Forest, Isolation Forest, Llama 3, Ollama API</div>
-                    <div class="tech-item"><i data-lucide="layout"></i> <strong>Frontend:</strong> React, Tailwind CSS, Chart.js, React Flow</div>
+                <div class="grid-2-col" style="margin-top: 20px; gap: 20px;">
+                    <div class="card-box" style="padding: 16px 24px;">
+                        <h3 class="card-heading text-accent" style="font-size: 16px;"><i data-lucide="settings-2"></i> Algorithmic Detection (ML & Rules)</h3>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+                            <strong>Responsibilities:</strong> Determining if an attack is happening based on traffic variables.
+                        </p>
+                        <ul style="font-size: 12px; color: var(--text-muted); padding-left: 20px; margin-top: 8px; line-height: 1.5;">
+                            <li><strong>Port Scan:</strong> Flags connection counts to consecutive destination ports (Random Forest).</li>
+                            <li><strong>SYN Flood:</strong> Checks half-open connections and TCP SYN packets/second thresholds.</li>
+                            <li><strong>ARP Spoofing:</strong> Stateful rule checks verifying active IP-MAC mapping mismatches.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-box" style="padding: 16px 24px;">
+                        <h3 class="card-heading text-success" style="font-size: 16px;"><i data-lucide="sparkles"></i> AI Explanation Layer (Llama 3)</h3>
+                        <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+                            <strong>Responsibilities:</strong> Translating logs and features into understandable text and recommended actions.
+                        </p>
+                        <ul style="font-size: 12px; color: var(--text-muted); padding-left: 20px; margin-top: 8px; line-height: 1.5;">
+                            <li><strong>No Decision-Making:</strong> The LLM does *not* detect the threat; it only explains it.</li>
+                            <li><strong>Plain English Translation:</strong> Converts hex logs, IP strings, and ports to human context.</li>
+                            <li><strong>Actionable Intelligence:</strong> Suggests responses (e.g. "Isolate host 192.168.1.105").</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- SLIDE 6: Demo Applications Showcase (NEW) -->
+            <!-- SLIDE 6: System Architecture -->
             <section class="slide" id="slide-6" data-slide-index="6">
                 <div class="slide-header">
                     <span class="slide-num-tag">06</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Investor Demo Applications & Ecosystem</h2>
-                        <p class="slide-subtitle">5 Specialized Applications Engineered to Demonstrate End-to-End KairosAI Defense Capabilities</p>
+                        <h2 class="slide-title">System Architecture</h2>
+                        <p class="slide-subtitle">Unified Technical Data Stream and Component Stacks of the Prototype</p>
+                    </div>
+                </div>
+
+                <div class="grid-2-col" style="gap: 24px;">
+                    <!-- Left: Pipeline Flow -->
+                    <div class="card-box">
+                        <h3 class="card-heading text-primary" style="font-size: 18px;"><i data-lucide="git-branch"></i> Data Flow Pipeline</h3>
+                        <div class="problem-list" style="margin-top: 14px; gap: 10px;">
+                            <div class="problem-item" style="padding-bottom: 6px;">
+                                <div class="problem-bullet" style="width: 24px; height: 24px; font-size: 11px;">1</div>
+                                <div>
+                                    <h4 class="problem-title" style="font-size: 13px;">Packet Capture & Feature Extraction</h4>
+                                    <p class="problem-text" style="font-size: 11px;">Scapy/PyShark processes raw frames, extracting metadata and tracking state in memory.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item" style="padding-bottom: 6px;">
+                                <div class="problem-bullet" style="width: 24px; height: 24px; font-size: 11px;">2</div>
+                                <div>
+                                    <h4 class="problem-title" style="font-size: 13px;">ML & Rule-Based Detection</h4>
+                                    <p class="problem-text" style="font-size: 11px;">Feature arrays are run through Scikit-Learn models and static verification rules.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item" style="padding-bottom: 6px;">
+                                <div class="problem-bullet" style="width: 24px; height: 24px; font-size: 11px;">3</div>
+                                <div>
+                                    <h4 class="problem-title" style="font-size: 13px;">Alerting & Local AI Explanation</h4>
+                                    <p class="problem-text" style="font-size: 11px;">If a threat is classified, a local Ollama Llama 3 context is queried to explain the incident.</p>
+                                </div>
+                            </div>
+                            <div class="problem-item" style="padding-bottom: 6px;">
+                                <div class="problem-bullet" style="width: 24px; height: 24px; font-size: 11px;">4</div>
+                                <div>
+                                    <h4 class="problem-title" style="font-size: 13px;">Dashboard UI & PDF Reports</h4>
+                                    <p class="problem-text" style="font-size: 11px;">Real-time React interface renders the alert. Users can download a detailed incident report PDF.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Tech Stack Components -->
+                    <div class="card-box" style="justify-content: space-between;">
+                        <h3 class="card-heading" style="font-size: 18px;"><i data-lucide="layers"></i> Tech Stack Layers</h3>
+                        
+                        <div class="tech-stack-row" style="flex-direction: column; align-items: stretch; gap: 12px; margin-top: 10px;">
+                            <div class="card-box" style="padding: 10px 14px; background: rgba(0,0,0,0.015);">
+                                <h4 style="font-size: 13px; font-weight: 700; color: var(--primary);"><i data-lucide="server" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> COLLECTION & API</h4>
+                                <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;"><strong>Scapy • PyShark • Python 3.11 • FastAPI</strong><br>Asynchronous, high-performance sniffing engine capturing traffic metadata locally.</p>
+                            </div>
+                            
+                            <div class="card-box" style="padding: 10px 14px; background: rgba(0,0,0,0.015);">
+                                <h4 style="font-size: 13px; font-weight: 700; color: var(--accent);"><i data-lucide="cpu" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> PROCESSING & AI/ML</h4>
+                                <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;"><strong>Scikit-learn • Random Forest • Isolation Forest • Llama 3 • Ollama</strong><br>Local feature calculation and models paired with local language intelligence.</p>
+                            </div>
+
+                            <div class="card-box" style="padding: 10px 14px; background: rgba(0,0,0,0.015);">
+                                <h4 style="font-size: 13px; font-weight: 700; color: var(--success);"><i data-lucide="layout" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> USER INTERFACE & DB</h4>
+                                <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;"><strong>React • Chart.js • React Flow • SQLite</strong><br>Real-time telemetry streaming dashboard, visual flow mapping, and localized database storage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Live Prototype / Demo -->
+            <section class="slide" id="slide-7" data-slide-index="7">
+                <div class="slide-header">
+                    <span class="slide-num-tag">07</span>
+                    <div class="slide-title-group">
+                        <h2 class="slide-title">Live Prototype / Demo</h2>
+                        <p class="slide-subtitle">Interactive Threat Scenarios: Attack Trigger &rarr; Detection &rarr; Alert &rarr; AI Explanation</p>
                     </div>
                 </div>
 
                 <div class="grid-demo-showcase">
-                    <!-- Left Side: Table & App Selection List -->
+                    <!-- Left Side: Attack Tabs -->
                     <div class="app-list-container">
-                        <div class="app-table-header">
-                            <span>Application</span>
-                            <span style="text-align: center;">Needed?</span>
-                            <span style="text-align: right;">Priority</span>
+                        <div class="app-table-header" style="grid-template-columns: 2.2fr 1.2fr 0.6fr; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid var(--border-light); display: grid; font-family: var(--font-heading); font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                            <span>Target Attack</span>
+                            <span style="text-align: center;">Method</span>
+                            <span style="text-align: right;">Risk</span>
                         </div>
                         <div class="app-table-list">
-                            <!-- App Item 1 -->
-                            <div class="app-item-card active" data-app-target="customer-app">
-                                <div class="app-info-group">
-                                    <div class="app-num-badge">1</div>
+                            <!-- Tab Item 1 -->
+                            <div class="app-item-card active" data-app-target="port-scan" style="grid-template-columns: 2.2fr 1.2fr 0.6fr; display: grid; align-items: center; cursor: pointer; border: 1px solid var(--border-light); border-radius: 12px; padding: 12px 16px; background: #ffffff;">
+                                <div class="app-info-group" style="display: flex; align-items: center; gap: 12px;">
+                                    <div class="app-num-badge" style="width: 24px; height: 24px; background: var(--primary-light); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">1</div>
                                     <div>
-                                        <h4 class="app-title-text">Customer App (E-commerce)</h4>
-                                        <p class="app-desc-text">Storefront simulating real user traffic & target vectors</p>
+                                        <h4 class="app-title-text" style="font-size: 14px; font-weight: 700; color: var(--text-main);">Port Scanning</h4>
+                                        <p class="app-desc-text" style="font-size: 11px; color: var(--text-muted);">Reconnaissance probing</p>
                                     </div>
                                 </div>
-                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
-                                <div class="app-priority-stars">
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                </div>
+                                <div class="app-needed-badge" style="text-align: center; font-size: 11px;"><span class="pill-badge muted" style="padding: 2px 8px; font-size: 10px; background: var(--bg-canvas); color: var(--text-muted); border-radius: 12px;">ML + Rules</span></div>
+                                <div style="text-align: right; color: var(--warning); font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">MED</div>
                             </div>
 
-                            <!-- App Item 2 -->
-                            <div class="app-item-card" data-app-target="security-dashboard">
-                                <div class="app-info-group">
-                                    <div class="app-num-badge">2</div>
+                            <!-- Tab Item 2 -->
+                            <div class="app-item-card" data-app-target="syn-flood" style="grid-template-columns: 2.2fr 1.2fr 0.6fr; display: grid; align-items: center; cursor: pointer; border: 1px solid var(--border-light); border-radius: 12px; padding: 12px 16px; background: #ffffff;">
+                                <div class="app-info-group" style="display: flex; align-items: center; gap: 12px;">
+                                    <div class="app-num-badge" style="width: 24px; height: 24px; background: var(--primary-light); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">2</div>
                                     <div>
-                                        <h4 class="app-title-text">Security Dashboard (Main Product)</h4>
-                                        <p class="app-desc-text">Central SOC control plane with live stream & LLM XAI</p>
+                                        <h4 class="app-title-text" style="font-size: 14px; font-weight: 700; color: var(--text-main);">SYN Flood</h4>
+                                        <p class="app-desc-text" style="font-size: 11px; color: var(--text-muted);">Volumetric DDoS flood</p>
                                     </div>
                                 </div>
-                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
-                                <div class="app-priority-stars">
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                </div>
+                                <div class="app-needed-badge" style="text-align: center; font-size: 11px;"><span class="pill-badge muted" style="padding: 2px 8px; font-size: 10px; background: var(--bg-canvas); color: var(--text-muted); border-radius: 12px;">ML Model</span></div>
+                                <div style="text-align: right; color: var(--danger); font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">HIGH</div>
                             </div>
 
-                            <!-- App Item 3 -->
-                            <div class="app-item-card" data-app-target="attack-simulator">
-                                <div class="app-info-group">
-                                    <div class="app-num-badge">3</div>
+                            <!-- Tab Item 3 -->
+                            <div class="app-item-card" data-app-target="arp-spoof" style="grid-template-columns: 2.2fr 1.2fr 0.6fr; display: grid; align-items: center; cursor: pointer; border: 1px solid var(--border-light); border-radius: 12px; padding: 12px 16px; background: #ffffff;">
+                                <div class="app-info-group" style="display: flex; align-items: center; gap: 12px;">
+                                    <div class="app-num-badge" style="width: 24px; height: 24px; background: var(--primary-light); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">3</div>
                                     <div>
-                                        <h4 class="app-title-text">Attack Simulator</h4>
-                                        <p class="app-desc-text">Adversary engine triggering synthetic floods & exploits</p>
+                                        <h4 class="app-title-text" style="font-size: 14px; font-weight: 700; color: var(--text-main);">ARP Spoofing</h4>
+                                        <p class="app-desc-text" style="font-size: 11px; color: var(--text-muted);">Subnet interception</p>
                                     </div>
                                 </div>
-                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
-                                <div class="app-priority-stars">
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                </div>
+                                <div class="app-needed-badge" style="text-align: center; font-size: 11px;"><span class="pill-badge muted" style="padding: 2px 8px; font-size: 10px; background: var(--bg-canvas); color: var(--text-muted); border-radius: 12px;">State Rules</span></div>
+                                <div style="text-align: right; color: var(--danger); font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">HIGH</div>
                             </div>
-
-                            <!-- App Item 4 -->
-                            <div class="app-item-card" data-app-target="developer-portal">
-                                <div class="app-info-group">
-                                    <div class="app-num-badge">4</div>
-                                    <div>
-                                        <h4 class="app-title-text">Developer Portal</h4>
-                                        <p class="app-desc-text">API keys, webhooks, SDK docs & custom security rules</p>
-                                    </div>
-                                </div>
-                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes</div>
-                                <div class="app-priority-stars">
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-empty"></i>
-                                </div>
-                            </div>
-
-                            <!-- App Item 5 -->
-                            <div class="app-item-card" data-app-target="mobile-app">
-                                <div class="app-info-group">
-                                    <div class="app-num-badge">5</div>
-                                    <div>
-                                        <h4 class="app-title-text">Mobile App</h4>
-                                        <p class="app-desc-text">On-the-go push notifications & instant triage response</p>
-                                    </div>
-                                </div>
-                                <div class="app-needed-badge"><i data-lucide="check-square"></i> Yes (rec)</div>
-                                <div class="app-priority-stars">
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-fill"></i>
-                                    <i data-lucide="star" class="star-empty"></i>
-                                    <i data-lucide="star" class="star-empty"></i>
-                                </div>
-                            </div>
+                        </div>
+                        
+                        <div style="background: rgba(2, 132, 199, 0.05); border-radius: 12px; padding: 12px; margin-top: auto; border: 1px solid var(--primary-light);">
+                            <p style="font-size: 11px; color: var(--text-muted); line-height: 1.4; margin: 0;">
+                                <i data-lucide="info" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; color: var(--primary);"></i>
+                                <strong>Interactive Simulation:</strong> Click the attack tabs on the left to see the detection telemetry and local LLM explanation generated for each scan scenario.
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Right Side: Interactive Display Space for Live App Demo Preview -->
+                    <!-- Right Side: Demo Console Display -->
                     <div class="demo-display-wrapper">
                         <div class="demo-display-header">
                             <div class="demo-display-title-group">
                                 <span class="dot red"></span>
                                 <span class="dot yellow"></span>
                                 <span class="dot green"></span>
-                                <span class="demo-url-bar" id="demo-url-text">https://demo.kairosstore.io/checkout</span>
+                                <span class="demo-url-bar" id="demo-url-text">http://localhost:8000/alerts/port-scan</span>
                             </div>
-                            <span class="demo-live-badge"><i data-lucide="play-circle"></i> DEMO DISPLAY SPACE</span>
+                            <span class="demo-live-badge"><i data-lucide="terminal"></i> DETECTOR CONSOLE</span>
                         </div>
-                        <div class="demo-display-body">
-                            <!-- PANEL 1: Customer App -->
-                            <div class="demo-panel active" id="panel-customer-app">
-                                <div class="mock-browser-hero">
-                                    <div class="mock-nav">
-                                        <span class="mock-brand"><i data-lucide="shopping-bag"></i> KairosStore</span>
-                                        <div class="mock-nav-links">
-                                            <span class="active">Shop</span>
-                                            <span>Cart (2)</span>
-                                            <span>Checkout</span>
-                                        </div>
-                                        <span class="mock-status-pill success"><i data-lucide="shield-check"></i> KairosAI Protection ON</span>
+                        <div class="demo-display-body" style="padding: 16px;">
+                            <!-- PANEL 1: Port Scan -->
+                            <div class="demo-panel active" id="panel-port-scan">
+                                <div class="alert-box-demo warning" style="margin-bottom: 12px;">
+                                    <div class="alert-box-top">
+                                        <span class="alert-tag warning"><i data-lucide="alert-triangle"></i> RECONNAISSANCE DETECTED</span>
+                                        <span class="alert-time" style="font-size: 11px;">Trigger: Active Scanning</span>
                                     </div>
-                                    <div class="mock-store-grid">
-                                        <div class="mock-product-card">
-                                            <div class="mock-img-placeholder"><i data-lucide="cpu"></i></div>
-                                            <div class="mock-prod-title">Enterprise IoT Gateway</div>
-                                            <div class="mock-prod-price">$299.00</div>
-                                            <button class="mock-buy-btn">Buy Now</button>
-                                        </div>
-                                        <div class="mock-product-card">
-                                            <div class="mock-img-placeholder"><i data-lucide="wifi"></i></div>
-                                            <div class="mock-prod-title">Secure WiFi 6 Node</div>
-                                            <div class="mock-prod-price">$149.00</div>
-                                            <button class="mock-buy-btn">Buy Now</button>
-                                        </div>
-                                        <div class="mock-product-card">
-                                            <div class="mock-img-placeholder"><i data-lucide="hard-drive"></i></div>
-                                            <div class="mock-prod-title">Encrypted Storage Array</div>
-                                            <div class="mock-prod-price">$599.00</div>
-                                            <button class="mock-buy-btn">Buy Now</button>
-                                        </div>
-                                    </div>
-                                    <div class="mock-telemetry-banner">
-                                        <i data-lucide="activity" class="banner-icon"></i>
-                                        <span><strong>Live Traffic Telemetry:</strong> 184 HTTP requests/sec streamed to KairosAI PyShark Sniffer. Zero user privacy exposure.</span>
+                                    <h4 class="alert-headline" style="font-size: 15px; margin-top: 6px;">🚨 PORT SCAN DETECTED</h4>
+                                    <p class="alert-sub text-mono" style="font-size: 11px; margin-top: 4px;">Source: 192.168.1.105 | Target: 192.168.1.1 (Gateway)</p>
+                                </div>
+                                <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-bottom: 12px;">
+                                    <strong>Feature Telemetry:</strong><br>
+                                    • Scanned Ports Count: 84 ports in 2.4s<br>
+                                    • TCP Connection Flags: SYN only<br>
+                                    • Detection Confidence (Random Forest): 94.0%
+                                </div>
+                                <div class="xai-box" style="margin-top: 0; padding: 12px; background: rgba(79, 70, 229, 0.04); border: 1px solid rgba(79, 70, 229, 0.15);">
+                                    <i data-lucide="sparkles" class="xai-icon" style="color: var(--accent);"></i>
+                                    <div class="xai-text" style="font-size: 12px;">
+                                        <strong>Llama 3 AI Explanation:</strong> "Host <strong>192.168.1.105</strong> contacted 84 consecutive ports in 2.4 seconds, which is characteristic of network reconnaissance (port scanning). The system suggests isolating the workstation to prevent further asset discovery."
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- PANEL 2: Security Dashboard -->
-                            <div class="demo-panel" id="panel-security-dashboard">
-                                <div class="mock-soc-grid">
-                                    <div class="soc-widget danger">
-                                        <div class="soc-widget-hdr">
-                                            <span><i data-lucide="alert-triangle"></i> ACTIVE INCIDENTS</span>
-                                            <span class="soc-badge danger">CRITICAL</span>
-                                        </div>
-                                        <div class="soc-big-val">03</div>
-                                        <p class="soc-sub">High Severity Threat Scans</p>
+                            <!-- PANEL 2: SYN Flood -->
+                            <div class="demo-panel" id="panel-syn-flood">
+                                <div class="alert-box-demo danger" style="margin-bottom: 12px;">
+                                    <div class="alert-box-top">
+                                        <span class="alert-tag danger"><i data-lucide="alert-octagon"></i> CRITICAL SEVERITY</span>
+                                        <span class="alert-time" style="font-size: 11px;">Trigger: Volumetric DDoS</span>
                                     </div>
-                                    <div class="soc-widget primary">
-                                        <div class="soc-widget-hdr">
-                                            <span><i data-lucide="radio"></i> SNIFFER RATE</span>
-                                            <span class="soc-badge primary">REALTIME</span>
-                                        </div>
-                                        <div class="soc-big-val">4.2k</div>
-                                        <p class="soc-sub">Packets / Second Captured</p>
-                                    </div>
-                                    <div class="soc-widget success">
-                                        <div class="soc-widget-hdr">
-                                            <span><i data-lucide="brain"></i> XAI ACCURACY</span>
-                                            <span class="soc-badge success">LLAMA 3</span>
-                                        </div>
-                                        <div class="soc-big-val">99.4%</div>
-                                        <p class="soc-sub">Confidence Score</p>
-                                    </div>
+                                    <h4 class="alert-headline" style="font-size: 15px; margin-top: 6px;">🚨 TCP SYN FLOOD DETECTED</h4>
+                                    <p class="alert-sub text-mono" style="font-size: 11px; margin-top: 4px;">Source: 192.168.1.201 | Target: 192.168.1.10 (Web Server)</p>
                                 </div>
-                                <div class="soc-xai-preview">
-                                    <div class="soc-xai-hdr"><i data-lucide="sparkles"></i> Llama 3 Natural Language Explanation</div>
-                                    <div class="soc-xai-body">
-                                        "Detected automated credential stuffing on <strong>/api/v1/auth/login</strong> from IP 198.51.100.42 (120 failed logins/min). Random Forest entropy score: 0.96. <em>Automated recommendation: Block source IP range and enforce CAPTCHA.</em>"
+                                <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-bottom: 12px;">
+                                    <strong>Feature Telemetry:</strong><br>
+                                    • SYN Packets Rate: 1,250 SYN/sec<br>
+                                    • Incomplete Handshake Ratio: 98.7%<br>
+                                    • Detection Confidence (ML Thresholding): 98.7%
+                                </div>
+                                <div class="xai-box" style="margin-top: 0; padding: 12px; background: rgba(79, 70, 229, 0.04); border: 1px solid rgba(79, 70, 229, 0.15);">
+                                    <i data-lucide="sparkles" class="xai-icon" style="color: var(--accent);"></i>
+                                    <div class="xai-text" style="font-size: 12px;">
+                                        <strong>Llama 3 AI Explanation:</strong> "The web server at <strong>192.168.1.10</strong> is receiving an abnormal volume of TCP SYN requests from <strong>192.168.1.201</strong> with no ACK confirmations, exhausting connection sockets. This constitutes a SYN Flood DDoS attack. Recommended actions include blocking the source IP at the firewall level."
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- PANEL 3: Attack Simulator -->
-                            <div class="demo-panel" id="panel-attack-simulator">
-                                <div class="sim-controls-card">
-                                    <div class="sim-hdr"><i data-lucide="crosshair"></i> Adversary Threat Generator Controls</div>
-                                    <div class="sim-vector-grid">
-                                        <button class="sim-vector-btn active"><i data-lucide="zap"></i> SYN Flood DDoS</button>
-                                        <button class="sim-vector-btn"><i data-lucide="terminal"></i> SQL Injection</button>
-                                        <button class="sim-vector-btn"><i data-lucide="search"></i> Nmap Port Scan</button>
-                                        <button class="sim-vector-btn"><i data-lucide="key"></i> Brute Force SSH</button>
+                            <!-- PANEL 3: ARP Spoofing -->
+                            <div class="demo-panel" id="panel-arp-spoof">
+                                <div class="alert-box-demo danger" style="margin-bottom: 12px;">
+                                    <div class="alert-box-top">
+                                        <span class="alert-tag danger"><i data-lucide="alert-octagon"></i> MITM ATTACK DETECTED</span>
+                                        <span class="alert-time" style="font-size: 11px;">Trigger: IP-MAC Cache Conflict</span>
                                     </div>
-                                    <div class="sim-terminal-box">
-                                        <div class="term-line prompt">$ python attack_sim.py --target 192.168.1.1 --vector SYN_FLOOD --rate 500p/s</div>
-                                        <div class="term-line success">[+] Launching synthetic SYN flood packets on port 443...</div>
-                                        <div class="term-line warning">[!] KairosAI Anomaly Engine detected flow spike within 420ms!</div>
-                                        <div class="term-line danger">[X] Isolation Forest score: 0.98. Attack signature automatically isolated.</div>
-                                    </div>
+                                    <h4 class="alert-headline" style="font-size: 15px; margin-top: 6px;">🚨 ARP SPOOFING DETECTED</h4>
+                                    <p class="alert-sub text-mono" style="font-size: 11px; margin-top: 4px;">Host Affected: 192.168.1.1 (Gateway) | Subnet Conflict</p>
                                 </div>
-                            </div>
-
-                            <!-- PANEL 4: Developer Portal -->
-                            <div class="demo-panel" id="panel-developer-portal">
-                                <div class="dev-portal-card">
-                                    <div class="dev-hdr">
-                                        <div class="dev-title"><i data-lucide="code-2"></i> REST API & Webhooks Integration</div>
-                                        <span class="dev-tag">v1.2 Stable</span>
-                                    </div>
-                                    <div class="dev-code-preview text-mono">
-<span class="code-comment"># Query active threat alerts via KairosAI REST API</span>
-<span class="code-keyword">import</span> requests
-
-headers = {<span class="code-str">"Authorization"</span>: <span class="code-str">"Bearer kairos_live_sec_key_99x"</span>}
-response = requests.get(<span class="code-str">"https://api.kairosai.io/v1/incidents/active"</span>, headers=headers)
-print(response.json())
-                                    </div>
-                                    <div class="dev-json-response text-mono">
-{
-  <span class="code-str">"status"</span>: <span class="code-str">"success"</span>,
-  <span class="code-str">"active_alerts"</span>: 1,
-  <span class="code-str">"primary_incident"</span>: { <span class="code-str">"type"</span>: <span class="code-str">"SYN Scan"</span>, <span class="code-str">"threat_level"</span>: <span class="code-str">"HIGH"</span>, <span class="code-str">"mitigated"</span>: true }
-}
-                                    </div>
+                                <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-light); border-radius: 8px; padding: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-bottom: 12px;">
+                                    <strong>Feature Telemetry:</strong><br>
+                                    • IP Address Claimed: 192.168.1.1 (Gateway)<br>
+                                    • Legitimate Address MAC: 00:11:22:33:44:55<br>
+                                    • Conflicting Device MAC: 00:1A:2B:3C:4D:5E (Active Match: True)
                                 </div>
-                            </div>
-
-                            <!-- PANEL 5: Mobile App -->
-                            <div class="demo-panel" id="panel-mobile-app">
-                                <div class="mobile-frame-wrapper">
-                                    <div class="mobile-device">
-                                        <div class="mobile-screen">
-                                            <div class="mobile-header">
-                                                <span>9:41</span>
-                                                <i data-lucide="wifi"></i>
-                                            </div>
-                                            <div class="mobile-app-hdr">
-                                                <i data-lucide="shield-alert" class="text-accent"></i>
-                                                <span>KairosAI Mobile SOC</span>
-                                            </div>
-                                            <div class="mobile-alert-card danger">
-                                                <div class="mobile-alert-hdr">
-                                                    <span class="badge danger">CRITICAL ALERT</span>
-                                                    <span class="time">Just now</span>
-                                                </div>
-                                                <h4>Port Scan Blocked</h4>
-                                                <p>Source: 192.168.1.105 (Dev Workstation)</p>
-                                                <div class="mobile-action-btn">Isolate Host Now</div>
-                                            </div>
-                                            <div class="mobile-stat-row">
-                                                <div class="m-stat"><span>Status</span><strong>Protected</strong></div>
-                                                <div class="m-stat"><span>Latency</span><strong>&lt;1ms</strong></div>
-                                            </div>
-                                        </div>
+                                <div class="xai-box" style="margin-top: 0; padding: 12px; background: rgba(79, 70, 229, 0.04); border: 1px solid rgba(79, 70, 229, 0.15);">
+                                    <i data-lucide="sparkles" class="xai-icon" style="color: var(--accent);"></i>
+                                    <div class="xai-text" style="font-size: 12px;">
+                                        <strong>Llama 3 AI Explanation:</strong> "An ARP packet has associated the gateway IP <strong>192.168.1.1</strong> with the MAC address of an unrecognized device <strong>00:1A:2B:3C:4D:5E</strong>, triggering a cache conflict. This indicates an ARP Spoofing (MITM) attack trying to intercept network traffic. Informing network administrators to flush ARP caches and isolate the offending MAC is recommended."
                                     </div>
                                 </div>
                             </div>
@@ -664,89 +646,13 @@ print(response.json())
                 </div>
             </section>
 
-            <!-- SLIDE 7: Product Capabilities -->
-            <section class="slide" id="slide-7" data-slide-index="7">
-                <div class="slide-header">
-                    <span class="slide-num-tag">07</span>
-                    <div class="slide-title-group">
-                        <h2 class="slide-title">Product Capabilities & Performance Metrics</h2>
-                        <p class="slide-subtitle">Enterprise-Grade Performance Engineered for Resource-Constrained Environments</p>
-                    </div>
-                </div>
-
-                <div class="grid-2-col">
-                    <div class="dashboard-mockup-card">
-                        <div class="mockup-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="mockup-title">KairosAI Live Threat Monitor (Mock UI)</span>
-                        </div>
-                        <div class="mockup-body">
-                            <div class="alert-box-demo danger">
-                                <div class="alert-box-top">
-                                    <span class="alert-tag danger"><i data-lucide="alert-octagon"></i> HIGH SEVERITY ALERT</span>
-                                    <span class="alert-time">10:42:15 AM</span>
-                                </div>
-                                <h4 class="alert-headline">Port Scan & Lateral Reconnaissance Detected</h4>
-                                <p class="alert-sub text-mono">Source IP: 192.168.1.105 ➔ Destination: 192.168.1.1 (Gateway)</p>
-                                <div class="xai-box">
-                                    <i data-lucide="sparkles" class="xai-icon"></i>
-                                    <div class="xai-text">
-                                        <strong>AI Explanation:</strong> "Host 192.168.1.105 attempted 84 SYN connections to consecutive ports within 2.4 seconds. Random Forest flagged high entropy score (0.94). This indicates automated port scanning. <em>Recommended Action: Isolate host 192.168.1.105 immediately.</em>"
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="alert-box-demo warning mt-2">
-                                <div class="alert-box-top">
-                                    <span class="alert-tag warning"><i data-lucide="shield-alert"></i> MEDIUM SEVERITY</span>
-                                    <span class="alert-time">10:38:02 AM</span>
-                                </div>
-                                <h4 class="alert-headline">Unusual Data Transfer Volume</h4>
-                                <p class="alert-sub text-mono">Source IP: 10.0.4.12 (Finance PC) ➔ 185.220.101.5 (External IP)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-column">
-                        <div class="metric-box">
-                            <div class="metric-header">
-                                <h3 class="metric-val text-success">99.2%</h3>
-                                <i data-lucide="check-circle" class="metric-icon success"></i>
-                            </div>
-                            <h4>ML Detection Accuracy</h4>
-                            <p>Validated on benchmark NIDS datasets (CIC-IDS) with near-zero false positive rates after threshold tuning.</p>
-                        </div>
-
-                        <div class="metric-box">
-                            <div class="metric-header">
-                                <h3 class="metric-val text-accent">&lt; 1 ms</h3>
-                                <i data-lucide="zap" class="metric-icon accent"></i>
-                            </div>
-                            <h4>Detection Inference Latency</h4>
-                            <p>Lightweight Random Forest inference per flow packet ensures zero network bottlenecks on typical hardware.</p>
-                        </div>
-
-                        <div class="metric-box">
-                            <div class="metric-header">
-                                <h3 class="metric-val text-primary">100%</h3>
-                                <i data-lucide="lock" class="metric-icon primary"></i>
-                            </div>
-                            <h4>Privacy-First Metadata Analysis</h4>
-                            <p>Analyzes packet headers & timing without inspecting sensitive encrypted payloads (GDPR & HIPAA compliant).</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SLIDE 8: Competitive Advantage -->
+            <!-- SLIDE 8: Testing & Validation -->
             <section class="slide" id="slide-8" data-slide-index="8">
                 <div class="slide-header">
                     <span class="slide-num-tag">08</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Competitive Landscape & Defensive Moat</h2>
-                        <p class="slide-subtitle">Positioned at the Intersection of ML Anomaly Detection & Natural Language XAI</p>
+                        <h2 class="slide-title">Testing & Validation</h2>
+                        <p class="slide-subtitle">Rigorous Testing Metrics Measured in Controlled Environments during Round 2 Testing</p>
                     </div>
                 </div>
 
@@ -754,147 +660,108 @@ print(response.json())
                     <table class="comp-table">
                         <thead>
                             <tr>
-                                <th>Feature / Metric</th>
-                                <th>Legacy IDS (Snort/Zeek)</th>
-                                <th>Enterprise SIEM (Splunk/CrowdStrike)</th>
-                                <th>Enterprise NDR (Darktrace)</th>
-                                <th class="highlight-col">KairosAI (Ours)</th>
+                                <th>Attack Vector</th>
+                                <th>Detection Method</th>
+                                <th>Accuracy</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>F1 Score</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Plain-English XAI Explanations</strong></td>
-                                <td class="text-danger"><i data-lucide="x"></i> No (Raw Logs)</td>
-                                <td class="text-warning"><i data-lucide="minus"></i> Limited Jargon</td>
-                                <td class="text-warning"><i data-lucide="minus"></i> Proprietary Alerts</td>
-                                <td class="highlight-col text-success"><strong><i data-lucide="check"></i> Built-in LLM XAI</strong></td>
+                                <td><strong>Port Scanning</strong></td>
+                                <td>Random Forest (ML) + Target Probing Check</td>
+                                <td>[Accuracy]</td>
+                                <td>[Precision]</td>
+                                <td>[Recall]</td>
+                                <td>[F1 Score]</td>
                             </tr>
                             <tr>
-                                <td><strong>Target Market</strong></td>
-                                <td>DevOps / Enterprise</td>
-                                <td>Fortune 2000 Enterprises</td>
-                                <td>Enterprise SOCs</td>
-                                <td class="highlight-col text-primary"><strong>SMBs & Education</strong></td>
+                                <td><strong>SYN Flood DDoS</strong></td>
+                                <td>SYN Rate Thresholding + TCP State Check</td>
+                                <td>[Accuracy]</td>
+                                <td>[Precision]</td>
+                                <td>[Recall]</td>
+                                <td>[F1 Score]</td>
                             </tr>
                             <tr>
-                                <td><strong>Annual Cost (TCO)</strong></td>
-                                <td>Open-Source + Analyst Cost ($150k+)</td>
-                                <td>$100,000+ / Year</td>
-                                <td>$60,000+ / Year</td>
-                                <td class="highlight-col text-success"><strong>&lt; $3,600 / Year</strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Malware-Free Attack Detection</strong></td>
-                                <td class="text-danger"><i data-lucide="x"></i> Signature Only</td>
-                                <td class="text-success"><i data-lucide="check"></i> Yes</td>
-                                <td class="text-success"><i data-lucide="check"></i> Yes</td>
-                                <td class="highlight-col text-success"><strong><i data-lucide="check"></i> Isolation Forest Anomaly</strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Setup & Deployment Time</strong></td>
-                                <td>Weeks of Rule Tuning</td>
-                                <td>Months of SIEM Integration</td>
-                                <td>Weeks of Passive Learning</td>
-                                <td class="highlight-col text-success"><strong>&lt; 15 Minutes (Plug & Play)</strong></td>
+                                <td><strong>ARP Spoofing</strong></td>
+                                <td>Subnet IP-MAC Address Cache Rules</td>
+                                <td>[Accuracy]</td>
+                                <td>[Precision]</td>
+                                <td>[Recall]</td>
+                                <td>[F1 Score]</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="moat-pills-row">
-                    <div class="moat-pill">
-                        <i data-lucide="shield"></i> <strong>Key Moat 1:</strong> Proprietary Security Prompt Library tailored for network anomaly interpretation.
+                <div class="grid-2-col" style="margin-top: 20px; gap: 20px;">
+                    <div class="card-box" style="padding: 16px 20px;">
+                        <h4 style="font-size: 14px; font-weight: 700; color: var(--accent);"><i data-lucide="alert-triangle" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> False Positive Rate</h4>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;"><strong>Metric:</strong> [False Positive Rate]</p>
+                        <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Measures normal campus activities incorrectly flagged as threats.</p>
                     </div>
-                    <div class="moat-pill">
-                        <i data-lucide="zap"></i> <strong>Key Moat 2:</strong> Ultra-fast hybrid supervised/unsupervised pipeline optimized for CPU edge nodes.
+                    
+                    <div class="card-box" style="padding: 16px 20px;">
+                        <h4 style="font-size: 14px; font-weight: 700; color: var(--success);"><i data-lucide="zap" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> Detection Inference Latency</h4>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;"><strong>Metric:</strong> [Detection Latency]</p>
+                        <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Measures elapsed time between packet capture and engine classification.</p>
+                    </div>
+                </div>
+
+                <div class="moat-pills-row" style="margin-top: 14px;">
+                    <div class="moat-pill" style="font-size: 12px; padding: 10px 14px;">
+                        <i data-lucide="info"></i> <strong>Validation Note:</strong> All values above are placeholders and will be updated with measured Round 2 experimental results.
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 9: Team Execution -->
+            <!-- SLIDE 9: Limitations & Scalability -->
             <section class="slide" id="slide-9" data-slide-index="9">
                 <div class="slide-header">
                     <span class="slide-num-tag">09</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Team Execution & Technical Ownership</h2>
-                        <p class="slide-subtitle">Role Alignment & Comprehensive Task Ownership Across Core System Engineering</p>
+                        <h2 class="slide-title">Limitations & Scalability</h2>
+                        <p class="slide-subtitle">A Realistic Appraisal of Prototype Boundaries and the Roadmap for Future Expansion</p>
                     </div>
                 </div>
 
-                <div class="grid-4-team">
-                    <!-- Meet Shah -->
-                    <div class="team-card">
-                        <div class="team-card-header">
-                            <div class="avatar-placeholder ms">MS</div>
-                            <h4 class="team-name">Meet Shah</h4>
-                            <span class="team-role-tag primary"><i data-lucide="server"></i> Backend Lead</span>
-                        </div>
-                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
-                        <ul class="team-task-list">
-                            <li class="team-task-item"><strong>Packet Sniffing Engine:</strong> Implemented Scapy & PyShark capture pipeline for 4k+ pkts/sec real-time extraction.</li>
-                            <li class="team-task-item"><strong>Async FastAPI Architecture:</strong> Built high-concurrency REST server with SQLite persistence & fast routing.</li>
-                            <li class="team-task-item"><strong>API & Webhook Infra:</strong> Engineered REST endpoints, JWT auth, and live alert webhook dispatchers.</li>
-                            <li class="team-task-item"><strong>Data Schema & Metrics:</strong> Defined 5-tuple flow models, payload entropy features, and DB migrations.</li>
+                <div class="grid-2-col" style="gap: 24px;">
+                    <!-- Limitations Card -->
+                    <div class="card-box" style="border-top: 4px solid var(--danger);">
+                        <h3 class="card-heading text-danger" style="font-size: 18px;"><i data-lucide="shield-alert"></i> Current Scope & Limitations</h3>
+                        <ul style="font-size: 13px; color: var(--text-muted); padding-left: 20px; margin-top: 16px; line-height: 1.8;">
+                            <li><strong>Attack Domain Limits:</strong> Currently limited to detecting Port Scanning, SYN Flood, and ARP Spoofing.</li>
+                            <li><strong>Environment Scope:</strong> Verified in controlled, local virtual subnet environments rather than enterprise scale.</li>
+                            <li><strong>Response Scope:</strong> Focused on detection, real-time alerting, and LLM explanation. Automated blocking or containment is currently out of scope.</li>
+                            <li><strong>ML Model Dependencies:</strong> Anomaly detection thresholds depend heavily on clean local network baseline training datasets.</li>
+                            <li><strong>Encrypted Payloads:</strong> Operates strictly on TCP/IP packet header metadata and flow statistics; deep payload inspections are limited by encryption.</li>
                         </ul>
                     </div>
 
-                    <!-- Pranav Mishra -->
-                    <div class="team-card">
-                        <div class="team-card-header">
-                            <div class="avatar-placeholder pm">PM</div>
-                            <h4 class="team-name">Pranav Mishra</h4>
-                            <span class="team-role-tag accent"><i data-lucide="layout"></i> Frontend Lead</span>
-                        </div>
-                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
-                        <ul class="team-task-list">
-                            <li class="team-task-item"><strong>React SOC Control Plane:</strong> Built real-time streaming UI with network flow graphs (React Flow).</li>
-                            <li class="team-task-item"><strong>Design System & Tailwind:</strong> Crafted 1920x1080 canvas engine, CSS tokens, and Chart.js feeds.</li>
-                            <li class="team-task-item"><strong>5 Investor Demo Apps:</strong> Built interactive storefront, SOC panel, simulator, dev portal & mobile UI.</li>
-                            <li class="team-task-item"><strong>Interactive UX Polish:</strong> Integrated live packet counters, status badges, and overview drawer.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Jainam Dave -->
-                    <div class="team-card">
-                        <div class="team-card-header">
-                            <div class="avatar-placeholder jd">JD</div>
-                            <h4 class="team-name">Jainam Dave</h4>
-                            <span class="team-role-tag success"><i data-lucide="cpu"></i> AI/ML Specialist</span>
-                        </div>
-                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
-                        <ul class="team-task-list">
-                            <li class="team-task-item"><strong>Dual ML Engine:</strong> Trained Random Forest (99.2% accuracy) & Isolation Forest for zero-day threats.</li>
-                            <li class="team-task-item"><strong>LLM XAI Integration:</strong> Engineered local Llama 3 prompts (Ollama API) to translate logs into plain English.</li>
-                            <li class="team-task-item"><strong>Dataset Training & Tuning:</strong> Processed CIC-IDS benchmarks to suppress false positives below 0.8%.</li>
-                            <li class="team-task-item"><strong>Feature Engineering:</strong> Formulated flow duration, byte rates, packet sizes, & TCP flag vectors.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Bhaavya Mehta -->
-                    <div class="team-card">
-                        <div class="team-card-header">
-                            <div class="avatar-placeholder bm">BM</div>
-                            <h4 class="team-name">Bhaavya Mehta</h4>
-                            <span class="team-role-tag warning"><i data-lucide="shield-alert"></i> QA & Security Lead</span>
-                        </div>
-                        <h5 class="task-section-title"><i data-lucide="check-square"></i> Core Tasks & Deliverables</h5>
-                        <ul class="team-task-list">
-                            <li class="team-task-item"><strong>Adversary Attack Sim:</strong> Built python attack bench for SYN floods, port scans, SQLi, & SSH brute-force.</li>
-                            <li class="team-task-item"><strong>Penetration & Privacy QA:</strong> Audited zero PII payload exposure and verified GDPR compliance.</li>
-                            <li class="team-task-item"><strong>Automated Incident Reports:</strong> Programmed PDF incident summary generator for compliance exports.</li>
-                            <li class="team-task-item"><strong>End-to-End Triage QA:</strong> Conducted system stress testing, latency profiling, & pitch documentation.</li>
+                    <!-- Scalability Card -->
+                    <div class="card-box" style="border-top: 4px solid var(--success);">
+                        <h3 class="card-heading text-success" style="font-size: 18px;"><i data-lucide="trending-up"></i> Future Scaling Roadmap</h3>
+                        <ul style="font-size: 13px; color: var(--text-muted); padding-left: 20px; margin-top: 16px; line-height: 1.8;">
+                            <li><strong>Attack Class Expansion:</strong> Integrate support for additional classes such as DNS tunneling, credentials brute forcing, and internal spoofing.</li>
+                            <li><strong>Distributed Sensor Architecture:</strong> Deploy lightweight physical sensor nodes across multiple campus subnets feeding a central collector.</li>
+                            <li><strong>SIEM & Operations Integration:</strong> Forward telemetry into standardized platforms (e.g. syslog, Splunk, Elastic) for unified alerting.</li>
+                            <li><strong>Threat Intelligence Feeds:</strong> Pull live reputation updates and malicious IP lists to block known bad actors.</li>
+                            <li><strong>Automated Incident Response:</strong> Implement programmatic host isolation and automated firewall rules based on approved playbooks.</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 10: Conclusion & Final Closure -->
+            <!-- SLIDE 10: Conclusion & Future -->
             <section class="slide" id="slide-10" data-slide-index="10">
                 <div class="slide-header">
                     <span class="slide-num-tag">10</span>
                     <div class="slide-title-group">
-                        <h2 class="slide-title">Conclusion & Final Vision</h2>
-                        <p class="slide-subtitle">Transforming Network Defense Through Explainable AI & Intelligent Anomaly Detection</p>
+                        <h2 class="slide-title">From Detection to Defense</h2>
+                        <p class="slide-subtitle">Refining Intelligent Anomaly Detection & Plain-English Security Explanations</p>
                     </div>
                 </div>
 
@@ -906,8 +773,8 @@ print(response.json())
                                 <i data-lucide="shield-check"></i>
                             </div>
                             <div class="closure-card-content">
-                                <h3>Autonomous & Real-Time Defense</h3>
-                                <p>Continuous packet sniffing & dual machine learning (Random Forest + Isolation Forest) isolate network anomalies under 1ms, protecting against zero-day threats and malware-free intrusions.</p>
+                                <h3>1. DETECT</h3>
+                                <p>Focused real-time detection of Port Scan, SYN Flood, and ARP Spoofing using network features and ML-based behavioral checks.</p>
                             </div>
                         </div>
 
@@ -916,51 +783,41 @@ print(response.json())
                                 <i data-lucide="sparkles"></i>
                             </div>
                             <div class="closure-card-content">
-                                <h3>Plain-English Explainable AI (XAI)</h3>
-                                <p>Integrated local Llama 3 engine translates cryptic network logs into actionable incident reports, eliminating alert fatigue and empowering any IT administrator to act quickly.</p>
+                                <h3>2. EXPLAIN</h3>
+                                <p>A local Llama 3 engine translates technical TCP/IP features and logs into plain-English security intelligence and response actions.</p>
                             </div>
                         </div>
 
                         <div class="closure-card success-border">
                             <div class="closure-card-icon success">
-                                <i data-lucide="zap"></i>
+                                <i data-lucide="trending-up"></i>
                             </div>
                             <div class="closure-card-content">
-                                <h3>Built for SMBs & Education</h3>
-                                <p>Lightweight, affordable, and privacy-preserving. Solves the $150k/yr security analyst overhead problem with a plug-and-play architecture deployment in under 15 minutes.</p>
+                                <h3>3. SCALE</h3>
+                                <p>Future roadmap to support additional attack classes, distributed sensors, external threat intelligence feeds, and SIEM integration.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Call to Action & Team Contact Box -->
+                    <!-- Right: Project Summary Statement Card -->
                     <div class="closure-right-col">
-                        <div class="cta-card">
-                            <div class="cta-badge">
-                                <i data-lucide="rocket"></i> NEXT STEPS
+                        <div class="cta-card" style="justify-content: center; text-align: center;">
+                            <div class="cta-badge" style="margin: 0 auto 16px;">
+                                <i data-lucide="shield"></i> KAIROSAI CONCLUSION
                             </div>
-                            <h3 class="cta-title">Join Us in Securing the Underserved Digital Ecosystem</h3>
-                            <p class="cta-desc">
-                                Cyberattacks on SMBs are rising exponentially. KairosAI bridges the critical gap between complex enterprise security tools and everyday IT teams.
-                            </p>
-
-                            <div class="cta-highlights">
-                                <div class="cta-pill"><i data-lucide="check-circle-2" class="icon-success"></i> Pilot Deployment Ready</div>
-                                <div class="cta-pill"><i data-lucide="check-circle-2" class="icon-success"></i> 5 Modular Demo Apps</div>
-                                <div class="cta-pill"><i data-lucide="check-circle-2" class="icon-success"></i> Open for Strategic Partnerships</div>
+                            <h3 class="cta-title" style="font-size: 24px; line-height: 1.4;">KairosAI turns complex network activity into understandable security intelligence.</h3>
+                            
+                            <div style="margin: 30px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 20px 0;">
+                                <span style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--accent); letter-spacing: 1px;">DETECT. EXPLAIN. DEFEND.</span>
                             </div>
 
-                            <div class="team-contact-box">
-                                <h4 class="contact-box-title"><i data-lucide="users"></i> Project Lead Engineers</h4>
-                                <div class="team-names-grid">
-                                    <span><strong>Meet Shah</strong> • Backend Lead</span>
-                                    <span><strong>Pranav Mishra</strong> • Frontend Lead</span>
-                                    <span><strong>Jainam Dave</strong> • AI/ML Specialist</span>
-                                    <span><strong>Bhaavya Mehta</strong> • QA & Security</span>
-                                </div>
-                                <div class="contact-footer-line">
-                                    <span><i data-lucide="mail"></i> contact@kairosai.io</span>
-                                    <span><i data-lucide="globe"></i> kairosai.io</span>
-                                    <span><i data-lucide="github"></i> github.com/kairosai</span>
+                            <div class="team-contact-box" style="margin-top: 0;">
+                                <h4 class="contact-box-title" style="justify-content: center;"><i data-lucide="users"></i> Engineering Team</h4>
+                                <div class="team-names-grid" style="grid-template-columns: repeat(2, 1fr); text-align: left; gap: 8px 16px;">
+                                    <span><strong>Meet Shah</strong><br>Backend Lead</span>
+                                    <span><strong>Pranav Mishra</strong><br>Frontend Lead</span>
+                                    <span><strong>Jainam Dave</strong><br>AI/ML Specialist</span>
+                                    <span><strong>Bhaavya Mehta</strong><br>QA & Security Lead</span>
                                 </div>
                             </div>
                         </div>
@@ -974,8 +831,9 @@ print(response.json())
     <!-- Bottom Floating Navigation Bar -->
     <div class="bottom-controls">
         <button class="ctrl-btn" id="btn-first" title="First Slide (Home)"><i data-lucide="chevrons-left"></i></button>
-        <button class="ctrl-btn" id="btn-prev" title="Previous Slide (←)"><i data-lucide="chevron-left"></i> Prev</button>
-        
+        <button class="ctrl-btn" id="btn-prev" title="Previous Slide (←)"><i data-lucide="chevron-left"></i>
+            Prev</button>
+
         <div class="slide-thumbnails-strip" id="thumbnail-strip">
             <!-- Thumbnails injected via JS -->
         </div>
@@ -987,7 +845,8 @@ print(response.json())
     <!-- Speaker Notes Drawer Modal -->
     <div class="speaker-notes-modal" id="speaker-notes-modal">
         <div class="notes-header">
-            <h3><i data-lucide="file-text"></i> Speaker Notes & Investor Q&A Cues — Slide <span id="notes-slide-num">1</span></h3>
+            <h3><i data-lucide="file-text"></i> Speaker Notes & Investor Q&A Cues — Slide <span
+                    id="notes-slide-num">1</span></h3>
             <button class="close-notes-btn" id="close-notes-btn"><i data-lucide="x"></i></button>
         </div>
         <div class="notes-content" id="notes-content">
@@ -1013,4 +872,5 @@ print(response.json())
         lucide.createIcons();
     </script>
 </body>
+
 </html>
